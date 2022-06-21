@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container {
+    max-width: 1100px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+h1,
+h2,
+span {
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+p,
+a {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
