@@ -56,6 +56,14 @@ hr {
     background-color: rgb(158, 158, 158);
 }
 
+/* responsive */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
 /* HEADER */
 header {
     background: url("../img/image-hero-desktop.jpg");
@@ -81,6 +89,40 @@ header .menu ul li {
 
 header .menu ul li a {
     color: #fff;
+}
+
+header .menu .drop {
+    display: none;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    header {
+        background: url("../img/image-hero-mobile.jpg");
+        height: 300px;
+    }
+
+    header .menu {
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header .menu nav {
+        display: none;
+    }
+
+    header .menu .drop {
+        display: flex;
+    }
+
+    header .menu .drop span {
+        transform: rotateZ(90deg);
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+    }
 }
 
 /* CONTENT_1 */
@@ -134,6 +176,10 @@ main .button-padrao a:hover {
     background-color: rgb(246, 246, 246);
 }
 
+main .button-mobile {
+    display: none;
+}
+
 main .button-bookmark a {
     background-color: rgb(246, 246, 246);
     color: rgb(158, 158, 158);
@@ -151,6 +197,38 @@ main .button-bookmark a {
     background-color: rgb(246, 246, 246);
     color: rgb(7, 161, 161);
     transition: 0.3s;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    .content_1 {
+        margin-top: -100px;
+    }
+
+    .content_1 .container img {
+        top: -50px;
+    }
+
+    .content_1 .container h1 {
+        font-size: 28px;
+    }
+
+    .content_1 .container p {
+        font-size: 16px;
+    }
+
+    main .button-bookmark a {
+        display: none;
+    }
+
+    main .button-mobile {
+        display: block;
+    }
+
+    main .button-mobile img {
+        top: -15px !important;
+        right: 0px;
+    }
 }
 
 /* CONTENT_2 */
@@ -192,6 +270,38 @@ main .button-bookmark a {
     width: 80%;
 }
 
+/* resonsive */
+@media (max-width: 1024px) {
+    .content_2 {
+        padding: 30px 0;
+    }
+
+    .content_2 .display {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content_2 .display hr {
+        display: none;
+    }
+
+    .content_2 .display .item {
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        margin-bottom: 5px;
+        border-bottom: 2px solid gray;
+    }
+
+    .content_2 .display .item span {
+        font-size: 28px;
+    }
+
+    .content_2 .display .item p {
+        font-size: 16px;
+    }
+}
+
 /* CONTENT_3 */
 .content_3 p {
     margin: 25px 0;
@@ -229,6 +339,37 @@ main .button-bookmark a {
     cursor: not-allowed !important;
 }
 
+/* responsive */
+@media (max-width: 1024px) {
+    .content_3 p {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+
+    .content_3 h2 {
+        font-size: 24px;
+    }
+
+    .content_3 .mini-container .header h2 {
+        font-size: 20px;
+    }
+
+    .content_3 .mini-container .header h2 {
+        font-size: 20px;
+    }
+
+    .content_3 .mini-container .footer h1 {
+        font-size: 20px;
+    }
+
+    .content_3 .mini-container .footer h1::after {
+        font-size: 14px;
+        font-weight: 450;
+        bottom: 6px;
+        right: -25px;
+    }
+}
+
 /* FOOTER */
 footer {
     background: url("../img/image-hero-desktop.jpg");
@@ -261,4 +402,28 @@ footer p {
     text-align: center;
     color: #fff;
     margin-top: 75px;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    footer {
+        margin-top: 60px;
+        background: url("../img/image-hero-mobile.jpg");
+    }
+
+    footer .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer .menu .logo {
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+    footer .menu ul li a {
+        font-size: 16px;
+    }
 }
