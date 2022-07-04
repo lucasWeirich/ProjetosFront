@@ -63,13 +63,15 @@
                                     <ul>
                                         <li>
                                             content_nome.scss
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>Todos os arquivos de estilização do site vão estar na pasta layout e
+                                                com nomenclatura parecida com este exemplo, onde cada página tem seu
+                                                arquivo de estilização para uma melhor organização.</span>
                                         </li>
                                         <li>
                                             layout.scss
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O arquivo layout.scss faz a junção de todos os arquivos, todos os
+                                                arquivos gerados de cada página é juntando em um só. Ex: <u>@use
+                                                    'content_nome';</u></span>
                                         </li>
                                     </ul>
                                 </li>
@@ -78,18 +80,20 @@
                                     <ul>
                                         <li>
                                             _button.scss
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O arquivo _button.scss é um exemplo de vários outros, é um arquivo de
+                                                módulo onde sua estilização é usada várias vezes. Este é um exemplo onde
+                                                o arquivo vai ter a estilização de "todos os botões iguais" do
+                                                site.</span>
                                         </li>
                                         <li>
                                             _form.scss
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O _form.scss é outro exemplo onde ele vai ter a estilização de "todos
+                                                os formulários iguais" do site.</span>
                                         </li>
                                         <li>
                                             modules.scss
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O arquivo module.scss tem a função de juntar todos os módulos criados
+                                                em um único arquivo.<u>Ex: @use 'button'; @use 'form';</span>
                                         </li>
                                     </ul>
                                 </li>
@@ -98,18 +102,24 @@
                                     <ul>
                                         <li>
                                             base.scss
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O arquivo base.scss tem a função de juntar a base de todas as páginas,
+                                                isso para que depois que processar o sass ele junte todos os codigos
+                                                nesse arquivo base e gere o arquivo style.css. <u>Ex: @use
+                                                    '1-base/base.scss'; @use '2-layouts/layout.scss'; @use
+                                                    '3-modules/modules.scss';</u></span>
                                         </li>
                                         <li>
                                             style.css (criado automático)
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O style.css é gerado automático quando executado o código de
+                                                processamento do sass, pegando o arquivo base.scss que nele está
+                                                chamando todos os demais códigos sass e convertendo o código sass em
+                                                css.</span>
                                         </li>
                                         <li>
                                             style.css.map (criado automático)
-                                            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit entium nemo
-                                                asperiores doloribus quia ad, quibusdam nulla, eos amet.</span>
+                                            <span>O arquivo style.css.map é criado de forma automática e serve como um
+                                                mapeamento para poder editar e em seguida visualizar as alterações
+                                                feitas em sass sem ter que atualizar o DevTools.</span>
                                         </li>
                                     </ul>
                                 </li>
