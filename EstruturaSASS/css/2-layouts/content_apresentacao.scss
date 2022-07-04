@@ -1,0 +1,82 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  CONTENT APRESENTAÇÃO
+  ================================
+*/
+
+.content_apresentacao {
+  & h1 {
+    text-align: center;
+    color: main.$ColorZero;
+    font-size: reset.toRem(40);
+  }
+
+  & h2 {
+    color: main.$ColorOne;
+    font-size: reset.toRem(30);
+  }
+
+  & .topico {
+    margin-top: 30px;
+
+    & .listFolderFiles {
+      margin-left: 50px;
+      margin-top: 30px;
+
+      & label {
+        color: main.$ColorZero;
+        font-size: reset.toRem(20);
+      }
+
+      & li ul {
+        margin-left: 20px;
+        color: #658ff3;
+        cursor: pointer;
+
+        & li {
+          position: relative;
+          border-radius: 5px;
+
+          & span {
+            position: absolute;
+            visibility: collapse;
+            background-color: #f4fbfb;
+            border-radius: 10px;
+            padding: 10px;
+            color: #03738c;
+            height: 60px;
+            width: 100%;
+            box-shadow: 0 0 10px #d8f1f1;
+            left: 105px;
+          }
+
+          &:hover {
+            background-color: #d8f1f1;
+
+            & span {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+
+    & .display {
+      @include main.FlexAroCen;
+
+      & .listFolderFiles {
+        width: 55%;
+        display: inline-block;
+      }
+
+      & .image {
+        width: 40%;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -68,6 +68,17 @@ header .menu .button a:hover {
     box-shadow: #808080cc;
 }
 
+/* responsive */
+@media (max-width: 1024px) {
+    header .menu {
+        justify-content: center;
+    }
+
+    header .menu .button a {
+        display: none;
+    }
+}
+
 /* **** MAIN **** */
 /* *** CONTENT *** */
 
@@ -120,6 +131,49 @@ BANNER
     color: #000;
 }
 
+/* responsive */
+@media (max-width: 1200px) {
+    .banner {
+        height: 700px;
+    }
+
+    .banner .container .text h1 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        background: url("../img/bg-hero-mobile.svg");
+        height: 655px;
+    }
+
+    .banner .container {
+        flex-wrap: wrap;
+        gap: 30px 0;
+    }
+
+    .banner .container .text,
+    .banner .container .image {
+        width: 100%;
+    }
+
+    .banner .container .text h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .banner .container .text p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .banner .container .text a {
+        display: none;
+    }
+}
+
 /* ****
 CONTENT_1
 **** */
@@ -137,6 +191,7 @@ CONTENT_1
     align-items: center;
     justify-content: space-around;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .content_1 .item.invert {
@@ -151,25 +206,76 @@ CONTENT_1
     width: 40%;
 }
 
+/* responsive */
+@media (max-width: 1200px) {
+    .content_1 {
+        padding: 40px 0;
+    }
+
+    .content_1 .item {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 50px;
+    }
+
+    .content_1 .item .text h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content_1 {
+        padding: 30px 0;
+    }
+
+    .content_1 .item {
+        height: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        padding: 20px 0;
+    }
+
+    .content_1 .item .text,
+    .content_1 .item .image {
+        width: 80%;
+    }
+
+    .content_1 .item .text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .content_1 .item .text h2 {
+        font-size: 26px;
+    }
+
+    .content_1 .item .text p {
+        font-size: 16px;
+    }
+}
+
 /* ****
 BOTTOM
 **** */
+.bottom {
+    margin-bottom: -85px;
+    z-index: 1;
+}
 
 .bottom .container {
     background: #fff;
     width: 55%;
-    height: 200px;
+    height: 280px;
     box-shadow: 0 0 10px #80808069;
     border-radius: 20px;
 }
 
 .bottom .container h2 {
-    font-size: 30;
     text-align: center;
-    padding: 35px 0;
+    padding: 50px 0;
 }
 
-.bottom a{
+.bottom a {
     padding: 8px 35px;
     background-color: #fe839f;
     color: #fff;
@@ -186,7 +292,140 @@ BOTTOM
     box-shadow: #808080cc;
 }
 
+/* responsive */
+@media (max-width: 1200px) {
+
+    .bottom {
+        margin-bottom: -65px;
+    }
+
+    .bottom .container {
+        height: 230px;
+    }
+
+    .bottom .container h2 {
+        font-size: 30px;
+    }
+
+    .bottom a {
+        left: 30%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .bottom .container {
+        height: 230px;
+        width: 80%;
+    }
+
+    .bottom .container h2 {
+        font-size: 26px;
+        padding: 40px 0;
+    }
+
+    .bottom a {
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
 /* ****
-BOTTOM
+FOOTER
 **** */
 
+footer {
+    background: #222;
+    min-height: 400px;
+    height: 100%;
+    padding-top: 100px;
+}
+
+footer p,
+footer a {
+    color: #fff;
+    font-size: 16px;
+}
+
+footer .display {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .contact {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    margin-top: 20px;
+}
+
+footer .contact img {
+    margin-right: 5px;
+}
+
+footer .contact .location {
+    display: flex;
+}
+
+footer .contact .location img {
+    height: 25px;
+}
+
+footer .links {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 30px;
+}
+
+footer .links a {
+    transition: ease-in-out 0.6;
+}
+
+footer .links a:hover {
+    text-decoration: underline;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+
+    footer {
+        min-height: 300px;
+    }
+
+    footer p,
+    footer a {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    footer .display {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 20px 40px;
+    }
+
+    footer .links {
+        display: none;
+    }
+
+}
