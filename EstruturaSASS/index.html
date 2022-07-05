@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
+        integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>TREINAMENTO SASS - SCSS</title>
 </head>
 
@@ -93,7 +107,7 @@
                                         <li>
                                             modules.scss
                                             <span>O arquivo module.scss tem a função de juntar todos os módulos criados
-                                                em um único arquivo.<u>Ex: @use 'button'; @use 'form';</span>
+                                                em um único arquivo.<u>Ex: @use 'button'; @use 'form';</u></span>
                                         </li>
                                     </ul>
                                 </li>
@@ -126,18 +140,194 @@
                             </ul>
                         </div><!-- listFolderFiles -->
                         <div class="image">
-                            <img src="images/exampleStructure.png" alt="Exemplo da Estrutura de Pasta do SASS">
+                            <a href="images/exampleStructure.png" data-fancybox
+                                data-caption="Exemplo da Estrutura de Pasta do SASS"><img
+                                    src="images/exampleStructure.png" alt="Exemplo da Estrutura de Pasta do SASS"></a>
                         </div>
                     </div><!-- display -->
-
-                    <div class="topico">
-
-                    </div><!-- topico -->
-
                 </div><!-- container -->
         </section><!-- content_apresentacao -->
+
+        <section class="display_images">
+            <div class="container">
+
+                <h2>Exemplos dos arquivos do SASS:</h2>
+                <div class="owl-carousel">
+
+                    <a href="images/example_main.png" data-fancybox="gallery"
+                        data-caption="Arquivo _main.scss que fica dentro da pasta 1-base">
+                        <img src="images/example_main.png" alt="Exemplo do arquivo _main.scss" />
+                    </a>
+
+                    <a href="images/example_reset.png" data-fancybox="gallery"
+                        data-caption="Arquivo _reset.scss que fica dentro da pasta 1-base">
+                        <img src="images/example_reset.png" alt="Exemplo do arquivo _reset.scss" />
+                    </a>
+
+                    <a href="images/example_base.png" data-fancybox="gallery"
+                        data-caption="Arquivo base.scss que fica dentro da pasta 1-base">
+                        <img src="images/example_base.png" alt="Exemplo do arquivo base.scss" />
+                    </a>
+
+                    <a href="images/example_content_nome.png" data-fancybox="gallery"
+                        data-caption="Arquivo content_nome.scss que fica dentro da pasta 2-layout">
+                        <img src="images/example_content_nome.png" alt="Exemplo do arquivo content_nome.scss" />
+                    </a>
+
+                    <a href="images/example_layout.png" data-fancybox="gallery"
+                        data-caption="Arquivo layout.scss que fica dentro da pasta 2-layout">
+                        <img src="images/example_layout.png" alt="Exemplo do arquivo layout.scss" />
+                    </a>
+
+                    <a href="images/example_button.png" data-fancybox="gallery"
+                        data-caption="Arquivo _button.scss que fica dentro da pasta 3-modules">
+                        <img src="images/example_button.png" alt="Exemplo do arquivo _button.scss" />
+                    </a>
+
+                    <a href="images/example_modules.png" data-fancybox="gallery"
+                        data-caption="Arquivo modules.scss que fica dentro da pasta 3-modules">
+                        <img src="images/example_modules.png" alt="Exemplo do arquivo modules.scss" />
+                    </a>
+
+                    <a href="images/example_baseAll.png" data-fancybox="gallery"
+                        data-caption="Arquivo base.scss que fica dentro da pasta css, junto com as demais pastas">
+                        <img src="images/example_baseAll.png" alt="Exemplo do arquivo base.scss" />
+                    </a>
+
+                </div><!-- owl-carousel -->
+
+            </div><!-- container -->
+        </section><!-- display_images -->
+
+        <section class="content_important">
+            <div class="container">
+
+                <div class="item">
+                    <h2>Variable:</h2>
+                    <div class="list">
+                        <ul>
+                            <span>Forma de declarar:</span>
+                            <li>$ColorMain:#023859;</li>
+                            <li>$ColorZero:#cf649a;</li>
+                            <li>$ColorOne: #03738C;</li>
+                        </ul>
+
+                        <ul>
+                            <span>Forma de chamar:</span>
+                            <li>color: main.$ColorMain;</li>
+                            <li>color: main.$ColorZero;</li>
+                            <li>color: main.$ColorOne;</li>
+                        </ul>
+                    </div><!-- list -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <h2>Mixins:</h2>
+                    <div class="list">
+                        <ul>
+                            <span>Forma de declarar:</span>
+                            <li>
+                                <a href="images/example_mixins.png" data-fancybox
+                                    data-caption="Declaração de um mixins"><img src="images/example_mixins.png"
+                                        alt="Exemplo de como declarar um mixins!"></a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <span>Forma de chamar:</span>
+                            <li>
+                                <a href="images/example_mixins1.png" data-fancybox data-caption="Usar um mixins"><img
+                                        src="images/example_mixins1.png" alt="Exemplo de como chamar um mixins!"></a>
+                            </li>
+                        </ul>
+                    </div><!-- list -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <h2>Breakpoint</h2>
+                    <div class="list">
+                        <ul>
+                            <span>Forma de declarar:</span>
+                            <li>
+                                <a href="images/example_breakpoint.png" data-fancybox
+                                    data-caption="Declaração de um breakpoint"><img src="images/example_breakpoint.png"
+                                        alt="Exemplo de como declarar um mixins!"></a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <span>Forma de chamar:</span>
+                            <li>
+                                <a href="images/example_breakpoint1.png" data-fancybox
+                                    data-caption="Usar um breakpoint"><img src="images/example_breakpoint1.png"
+                                        alt="Exemplo de como chamar um mixins!">
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- list -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <h2>Sass:Match</h2>
+                    <div class="list">
+                        <ul>
+                            <span>Forma de declarar:</span>
+                            <li>
+                                <a href="images/example_math.png" data-fancybox
+                                    data-caption="Declaração de um saas:math"><img src="images/example_math.png"
+                                        alt="Exemplo de como declarar o saas:math!"></a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <span>Forma de chamar:</span>
+                            <li>
+                                <a href="images/example_math1.png" data-fancybox data-caption="Usar o saas:math"><img
+                                        src="images/example_math1.png" alt="Exemplo de como usar o saas:math!">
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- list -->
+                </div><!-- item -->
+
+            </div><!-- container -->
+        </section><!-- content_important -->
+
     </main><!-- main_content -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            URLhashListener: true,
+            autoplayHoverPause: true,
+            startPosition: 'URLHash',
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
+                },
+                1300: {
+                    items: 4
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -47,7 +47,6 @@
             border-radius: 10px;
             padding: 10px;
             color: #03738c;
-            height: 60px;
             width: 100%;
             z-index: 1;
             box-shadow: 0 0 10px #d8f1f1;
@@ -80,4 +79,77 @@
       }
     }
   }
+}
+
+/* 
+  ================================
+  DISPLAY IMAGES
+  ================================
+*/
+
+.display_images {
+  padding: 70px 0;
+
+  & h2 {
+    color: main.$ColorOne;
+    font-size: reset.toRem(30);
+  }
+
+  & .owl-carousel {
+    position: relative;
+    padding: 20px 0;
+    transition: all 0.5s;
+
+    & a:hover {
+      &::after {
+        content: "Araste para o lado ou clique na imagem!";
+        position: absolute;
+        background-color: #fff;
+        z-index: 1;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        color: main.$ColorZero;
+        border-radius: 0 0 50px 0px;
+      }
+
+      & img {
+        box-shadow: 0 0 10px #444;
+      }
+    }
+  }
+
+}
+
+/* 
+  ================================
+  DISPLAY IMAGES
+  ================================
+*/
+
+.content_important {
+  padding-bottom: 30px;
+
+  & h2 {
+    color: main.$ColorOne;
+    font-size: reset.toRem(30);
+  }
+
+  & .item {
+    padding: 20px 0;
+
+    & .list {
+      @include main.FlexAroCen;
+    }
+
+    & span {
+      color: main.$ColorZero;
+      font-size: reset.toRem(20);
+    }
+  }
+}
+
+.name_class {
+  font-size: reset.toRem(20);
 }
