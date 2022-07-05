@@ -114,6 +114,13 @@ p {
   font-size: 0.875rem;
 }
 
+h1 {
+  font-size: 2.1875rem;
+  color: #023859;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
 /*CONTAINER*/
 .container_large,
 .container,
@@ -146,5 +153,95 @@ p {
   CONTENT BANNER
   ================================
 */
+/* 
+  ================================
+  CONTENT 1
+  ================================
+*/
+.content_1 {
+  padding: 30px;
+  text-align: center;
+}
+/* 
+  ================================
+  HEADER
+  ================================
+*/
+header {
+  background-color: rgba(1, 45, 63, 0.5411764706);
+  z-index: 11;
+  position: absolute;
+  width: 100%;
+}
+header .container_large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+header .container_large nav ul {
+  display: flex;
+}
+header .container_large nav ul a {
+  padding: 18px 25px;
+  color: #F5F5F5;
+  font-weight: 300;
+  font-size: 1.125rem;
+  border-bottom: solid 4px transparent;
+  transition: all 0.3s;
+}
+header .container_large nav ul a:hover {
+  border-bottom: solid #d53a2f;
+}
+header .container_large .menu-responsive {
+  display: none;
+}
+
+/* DESKTOP LARGE - 1400px*/
+@media screen and (max-width: 87.5rem) {
+  header {
+    width: 100%;
+    position: absolute;
+  }
+  header .container_large {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 0;
+  }
+  header .container_large nav ul li a {
+    font-size: 1.125rem;
+    padding: 12px 16px;
+  }
+}
+/* DESKTOP - 1200px*/
+@media (max-width: 75rem) {
+  header .container_large nav ul li a {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+}
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  header .container_large {
+    padding: 25px 0;
+  }
+  header .container_large .logo {
+    width: 200px;
+  }
+  header .container_large nav {
+    display: none;
+  }
+  header .container_large .menu-responsive {
+    display: block;
+    color: #fff;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  header {
+    position: inherit;
+    background: #012E40;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -26,10 +26,61 @@
 <body>
 
     <header>
-        
+        <div class="container_large">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">A Empresa</a></li>
+                    <li><a href="#">Obras</a></li>
+                    <li><a href="#">Soluções</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-responsive">
+                MENU
+            </div>
+        </div>
     </header>
 
     <main class="main-content">
+        <section class="content_banner">
+            <div class="owl-carousel owl-themes">
+                <img src="images/banner1.jpg" alt="">
+                <img src="images/banner2.jpg" alt="">
+                <img src="images/banner3.jpg" alt="">
+                <img src="images/banner4.jpg" alt="">
+            </div><!-- owl-carousel -->
+        </section><!-- content_banner -->
+
+        <section class="content_1">
+            <h1>Nossas Obras</h1>
+            <p>Participamos de obras que aceleram o desenvolvimento do país
+                <br>
+                e contribuem para a modernização da indústria nacional.
+                <br>
+                A qualidade dos produtos é assegurada pelos testes e ensaios realizados em todas
+                <br>
+                as etapas de fabricação como solda, jateamento e pintura.
+            </p>
+        </section>
+
+        <section class="content_images">
+            <div class="owl-carousel owl-themes">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+                <img src="images/item1.jpg" alt="">
+            </div>
+        </section><!-- content_images -->
 
     </main><!-- main-content -->
 
@@ -46,6 +97,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+        jQuery('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            items: 1
+        })
+    </script>
 
 </body>
 

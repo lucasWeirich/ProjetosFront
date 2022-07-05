@@ -58,6 +58,13 @@ p {
    font-size: reset.toRem(14);
 }
 
+h1 {
+   font-size: reset.toRem(35);
+   color: $ColorMain;
+   font-weight: 600;
+   margin-bottom: 15px;
+}
+
 // BREAKPOINTS
 
 @mixin breakpoint($point) {
