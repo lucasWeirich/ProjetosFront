@@ -20,6 +20,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"
         integrity="sha512-C8Movfk6DU/H5PzarG0+Dv9MA9IZzvmQpO/3cIlGIflmtY3vIud07myMu4M/NTPJl8jmZtt/4mC9bAioMZBBdA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Clone - Estrutural Zortea</title>
 </head>
 
@@ -49,12 +50,14 @@
 
     <main class="main-content">
         <section class="content_banner">
-            <div class="owl-carousel owl-themes">
-                <img src="images/banner1.jpg" alt="">
-                <img src="images/banner2.jpg" alt="">
-                <img src="images/banner3.jpg" alt="">
-                <img src="images/banner4.jpg" alt="">
-            </div><!-- owl-carousel -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/banner1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/banner2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/banner3.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section><!-- content_banner -->
 
         <section class="content_1">
@@ -70,22 +73,118 @@
         </section>
 
         <section class="content_images">
-            <div class="owl-carousel owl-themes">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-                <img src="images/item1.jpg" alt="">
-            </div>
+            <div class="container">
+                <div class="owl-carousel owl-themes">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                    <img src="images/item1.jpg" alt="">
+                </div>
+            </div><!-- container -->
         </section><!-- content_images -->
+
+        <section class="content_about">
+            <div class="container">
+                <div class="sobre">
+                    <div class="image">
+                        <img src="images/sobre_nos.jpg" alt="Imagem sobre nós">
+                    </div>
+                    <div class="text">
+                        <h1>SOBRE NÓS</h1>
+                        <h3>CONHEÇA A ESTRUTURAL ZORTEA</h3>
+
+                        <div class="display">
+                            <div class="item">
+                                <p>Através das rígidas exigências ISO 9001, possui profissionais qualificados e
+                                    treinados que
+                                    garantem total confiabilidade e qualidade na fabricação e montagem de seus produtos.
+                                </p>
+                                <p>Possui um moderno parque fabril de estruturas metálicas</p>
+                            </div>
+                            <div class="item">
+                                <p>com capacidade produtiva de até 700ton mensais.</p>
+                                <p><b>Atua em todo o território nacional e diversos países, na modernização do sistema
+                                        de
+                                        armazenagem, movimentação, importação e exportação de granéis sólidos.</b></p>
+
+                                <div class="button">
+                                    <a href="#">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- display -->
+                </div><!-- sobre -->
+                <div class="box">
+                    <a href="#">
+                        <img src="images/image_box.png" alt="">
+                        <h1>EMPRESA CERTIFICADA
+                            <br>
+                            ISO 9001-2015
+                        </h1>
+                        <h3>para projetos, fabricação
+                            <br>
+                            e montagem
+                            <br>
+                            de estruturas metálicas.
+                        </h3>
+                    </a>
+                </div><!-- box -->
+            </div><!-- container -->
+        </section><!-- content_about -->
+
 
     </main><!-- main-content -->
 
     <footer>
-        <!-- footer -->
+        <div class="container_small">
+            <div class="menu">
+                <img src="images/logo_footer.png" alt="Logo">
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">A Empresa</a></li>
+                        <li><a href="#">Obras</a></li>
+                        <li><a href="#">Soluções</a></li>
+                        <li><a href="#">Clientes</a></li>
+                        <li><a href="#">Notícias</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div><!-- menu -->
+            <div class="informations">
+                <div class="contact">
+                    <h1>+ 55 (49) 3541-3650</h1>
+                    <p>
+                        Br 282 | Km 343 | Trevo Oeste | Campos Novos - SC
+                        <br>
+                        CNPJ: 00.368.885/0001-86 | IE: 253.022.576
+                    </p>
+                </div><!-- contact -->
+                <div class="social">
+                    <p>Siga nas redes sociais <br><span style="color: red; font-weight: bold; margin-top: -10px;">ICON |
+                            ICON | ICON | ICON</span></p>
+
+                    <a href="#">
+                        <h2>NOTA FISCAL ELETRÔNICA</h2>
+                        <p>Faça o download aqui</p>
+                    </a>
+                </div><!-- social -->
+            </div><!-- informations -->
+            <div class="rodape">
+                <p>© Todos os direitos reservados - 2022 - Estrutural Zortea</p>
+                <ul>
+                    <li><a href="#">Acesso Restrito</a></li>
+                    <li><a href="#">Webmail</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+                <img src="images/studio_alpha.png" alt="Logo da Studio Alpha">
+            </div>
+        </div><!-- container -->
     </footer>
 
 
@@ -97,18 +196,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script type="text/javascript">
         jQuery('.owl-carousel').owlCarousel({
             loop: true,
-            margin: 0,
-            nav: false,
+            margin: 10,
+            nav: true,
             autoplay: true,
+            paginationSpeed: 300,
+            rewindSpeed: 400,
             autoplayTimeout: 4000,
             autoplayHoverPause: true,
             responsiveClass: true,
-            items: 1
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
         })
+
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
     </script>
 
 </body>

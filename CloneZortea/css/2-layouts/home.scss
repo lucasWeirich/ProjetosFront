@@ -15,8 +15,261 @@
 
 .content_1 {
   padding: 30px;
-
-  & h1 {
-  }
   text-align: center;
 }
+
+/* 
+  ================================
+  CONTENT IMAGES
+  ================================
+*/
+
+.content_images {
+  & .owl-carousel {
+
+    & .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      top: 40%;
+      position: absolute;
+      font-weight: bold;
+      font-size: 40px;
+      color: main.$ColorMain;
+
+      & span {
+        padding: 100% 10px;
+        transition: all 0.3s;
+        border-radius: 5px;
+        background-color: rgba(34, 34, 34, 0.037);
+
+        &:hover {
+          background-color: rgba(34, 34, 34, 0.252);
+        }
+      }
+    }
+  }
+}
+
+/* 
+  ================================
+  CONTENT ABOUT
+  ================================
+*/
+
+.content_about {
+  padding: 60px 0;
+
+  & .container {
+    @include main.FlexBetCen;
+
+    & .sobre {
+      width: 940px;
+      height: 100%;
+      @include main.FlexBetCen;
+
+      & .image {
+        width: 390px;
+      }
+
+      & .text {
+        width: 530px;
+        padding: 0 10px;
+
+        & h1 {
+          margin-bottom: 5px;
+        }
+
+        & h3 {
+          color: main.$ColorZero;
+          font-weight: 900;
+          margin-bottom: 20px;
+        }
+
+        & .display {
+          @include main.FlexBetCen;
+
+          & .item {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    & .box {
+      width: 350px;
+      height: 480px;
+      text-align: center;
+      background: #fff url("../images/box_fundo.png") bottom;
+      position: relative;
+      box-shadow: 0 0 40px rgb(209, 205, 205);
+
+      & h1 {
+        font-size: reset.toRem(18);
+      }
+
+      & h3 {
+        color: main.$ColorMain;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        background-color: main.$ColorSix;
+        width: 25px;
+        height: 40px;
+        position: absolute;
+        top: 60px;
+      }
+
+      &::before {
+        left: -25px;
+      }
+
+      &::after {
+        right: -25px;
+      }
+    }
+  }
+}
+
+/* DESKTOP LARGE - 1400px*/
+@include main.breakpoint(smashDesktopLarge) {
+  /* CONTENT ANOUT */
+
+  .content_about {
+    padding: 50px 0;
+
+    & .container {
+      & .sobre {
+        width: 900px;
+        height: 100%;
+        @include main.FlexBetCen;
+
+        & .image {
+          width: 300px;
+        }
+
+        & .text {
+          width: 550px;
+        }
+      }
+
+      & .box {
+        width: 300px;
+        height: 440px;
+      }
+    }
+  }
+}
+
+/* DESKTOP - 1200px*/
+@include main.breakpoint(smashDesktop) {
+  .content_about {
+    padding: 60px 0;
+
+    & .container {
+      & .sobre {
+        width: 55%;
+        height: 100%;
+        text-align: center;
+        flex-direction: column;
+
+        & .image {
+          width: 100%;
+
+          & img {
+            height: 300px;
+          }
+        }
+
+        & .text {
+          padding: 0 10px;
+
+          & h1 {
+            margin-bottom: 5px;
+          }
+
+          & h3 {
+            color: main.$ColorZero;
+            font-weight: 900;
+            margin-bottom: 20px;
+          }
+
+          & .display {
+            flex-direction: column;
+            
+            & .item {
+              width: 100%;
+              text-align: left;
+              @include main.FlexCenCen;
+              flex-direction: column;
+
+              & p {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      & .box {
+        & h1 {
+          font-size: reset.toRem(16);
+        }
+
+        & h3 {
+          font-size: reset.toRem(14);
+        }
+      }
+    }
+  }
+}
+
+/* TABLET BIG - 900px*/
+@include main.breakpoint(smashTabletBig) {
+  .content_about {
+    padding: 60px 0;
+  
+    & .container {
+      @include main.FlexCenCen;
+      flex-direction: column;
+      
+      & .sobre {
+        width: 100%;
+        margin-bottom: 40px;
+
+        & .text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+
+/* DESKTOP LARGE - 1400px*/
+@include main.breakpoint(smashDesktopLarge) {}
+
+/* DESKTOP - 1200px*/
+@include main.breakpoint(smashDesktop) {}
+
+/* LAPTOP - 1024px*/
+@include main.breakpoint(smashLaptop) {}
+
+/* TABLET BIG - 900px*/
+@include main.breakpoint(smashTabletBig) {}

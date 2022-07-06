@@ -1,0 +1,164 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  FOOTER
+  ================================
+*/
+
+footer {
+    & .container_small {
+        & .menu {
+            border-top: solid 1px main.$ColorFour;
+            border-bottom: solid 1px main.$ColorFour;
+            @include main.FlexBetCen;
+            height: 150px;
+
+            & nav ul {
+                display: flex;
+
+                & a {
+                    padding: 10px 15px;
+                    color: main.$ColorMain;
+                    font-weight: 300;
+                    font-size: reset.toRem(15);
+                    border-bottom: solid 2px transparent;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        border-bottom: solid 2px main.$ColorZero;
+                    }
+                }
+            }
+        }
+
+        & .informations {
+            padding: 30px 0;
+            @include main.FlexBetCen;
+
+            & h1 {
+                font-size: reset.toRem(19);
+                font-weight: 600;
+            }
+
+            & p {
+                font-size: reset.toRem(12);
+            }
+
+            & .contact {
+                & p {
+                    margin-top: 34px;
+                }
+            }
+
+            & .social {
+                h2 {
+                    color: main.$ColorMain;
+                    font-weight: 600;
+                    font-size: reset.toRem(12)
+                }
+
+                & a:hover h2,
+                a:hover p {
+                    color: main.$ColorZero;
+                }
+            }
+        }
+
+        & .rodape {
+            @include main.FlexBetCen;
+            align-items: baseline;
+            height: 50px;
+
+            & p,
+            a {
+                font-size: reset.toRem(12);
+                color: main.$ColorMain;
+
+            }
+
+            & ul {
+                display: flex;
+
+                & li {
+                    padding: 0 10px;
+
+                    & a:hover {
+                        color: main.$ColorZero;
+                    }
+                }
+            }
+
+            & img {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* LAPTOP - 1024px*/
+@include main.breakpoint(smashLaptop) {
+    footer {
+        & .container_small {
+            & .menu {
+                justify-content: center;
+
+                & nav ul {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET BIG - 900px*/
+@include main.breakpoint(smashTabletBig) {
+    footer {
+        & .container_small {
+
+            & .informations {
+                flex-wrap: wrap;
+                justify-content: space-around;
+                text-align: center;
+
+                & .social {
+                    h2 {
+                        color: main.$ColorMain;
+                        font-weight: 600;
+                        font-size: reset.toRem(12)
+                    }
+
+                    & a:hover h2,
+                    a:hover p {
+                        color: main.$ColorZero;
+                    }
+                }
+            }
+
+            & .rodape {
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+
+                & p {
+                    margin-bottom: 5px;
+                }
+
+
+            }
+        }
+    }
+}
+
+
+
+
+/* DESKTOP - 1200px*/
+@include main.breakpoint(smashDesktop) {}
+
+/* LAPTOP - 1024px*/
+@include main.breakpoint(smashLaptop) {}
+
+/* TABLET BIG - 900px*/
+@include main.breakpoint(smashTabletBig) {}
