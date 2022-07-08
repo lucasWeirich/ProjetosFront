@@ -1,0 +1,32 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  HEADER TITLE
+  ================================
+*/
+
+.header_title {
+
+    & .container {
+        display: flex;
+        align-items: center;
+        height: 170px;
+        position: relative;
+
+        & h1 {
+            margin-left: 120px;
+
+            &::before {
+                content: "";
+                width: 80px;
+                height: 5px;
+                position: absolute;
+                top: 45%;
+                left: 0;
+                background-color: main.$ColorFour;
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Skeleton FrontEnd</title>
+</head>
+
+<body>
+
+    <h1>Skeleton Front-End for display products</h1>
+
+
+    <div id="preloader_produtos">
+        <div class="display-loading">
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+
+            <div class="card-loading">
+                <div class="img"></div>
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="display-products" id="display-products" style="display: none;">
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+
+        <div class="card-loading">
+            <div class="img"></div>
+            <div class="content">
+                <div class="title"></div>
+                <div class="txt"></div>
+            </div>
+        </div>
+    </div>
+
+    <h1>PRODUTOS TESTE</h1>
+
+    <ul>
+        <li>Produto 01</li>
+        <li>Produto 02</li>
+        <li>Produto 03</li>
+        <li>Produto 04</li>
+        <li>Produto 05</li>
+        <li>Produto 06</li>
+        <li>Produto 07</li>
+        <li>Produto 08</li>
+        <li>Produto 09</li>
+        <li>Produto 10</li>
+    </ul>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+            $('#preloader_produtos .display-loading').delay(2000).fadeOut();
+            $('#preloader_produtos').delay(2000).fadeOut('slow');
+        })
+
+        $(document).ready(function () {
+            setTimeout(carregar, 2400);
+        });
+
+        function carregar() {
+            $('#display-products').show();
+        }
+    </script>
+
+</body>
+
+</html>

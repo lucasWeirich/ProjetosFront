@@ -38,6 +38,12 @@ header {
             display: none;
         }
     }
+
+    &.capa_header {
+        background: url("../images/capaHeader.png");
+        position: static;
+        height: 145px;
+    }
 }
 
 /* DESKTOP LARGE - 1400px*/
