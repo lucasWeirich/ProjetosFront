@@ -30,3 +30,22 @@
         }
     }
 }
+
+/* LAPTOP - 1024px*/
+@include main.breakpoint(smashLaptop) {
+    .header_title {
+        
+        & .container {
+            height: 120px;
+            justify-content: center;
+            
+            & h1 {
+                margin-left: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

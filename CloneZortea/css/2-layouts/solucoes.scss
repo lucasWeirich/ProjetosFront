@@ -1,0 +1,134 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  SOLUÇÕES
+  ================================
+*/
+
+.solucoes {
+
+    /* content_1 */
+    & .content_1 {
+        & .display {
+            @include main.FlexBetCen;
+            gap: 80px;
+
+            & .txt {
+                width: 400px;
+
+                & p {
+                    font-size: reset.toRem(16);
+                    line-height: 30px;
+                }
+            }
+
+            & .card {
+                width: 500px;
+                background-color: #fff;
+                box-shadow: 0 1px 90px rgb(0 0 0 / 21%);
+                padding: 40px 40px;
+                position: relative;
+
+                & h2 {
+                    font-size: reset.toRem(28);
+                    color: main.$ColorMain;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    text-align: center;
+
+                    &::after {
+                        content: "";
+                        width: 415px;
+                        height: 1px;
+                        position: absolute;
+                        background-color: #d53a2f;
+                        top: 85px;
+                        left: 45px;
+                    }
+                }
+
+                & ul {
+                    margin: 0 auto;
+                    margin-top: 40px;
+
+                    & li {
+                        margin: 10px;
+                        font-size: reset.toRem(14);
+                        line-height: 2.2;
+                        padding-left: 25px;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 7px;
+                            height: 7px;
+                            position: absolute;
+                            background-color: main.$ColorMain;
+                            top: 10px;
+                            left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* display_solucoes */
+    & .display_solucoes {
+        padding: 30px 0;
+
+        & .owl-carousel {
+            position: relative;
+
+            & img {
+                height: 205px;
+            }
+
+            & .owl-nav {
+                font-weight: bold;
+                font-size: 50px;
+                @include main.FlexBetCen;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 1111;
+                height: 205px;
+                color: main.$ColorMain;
+                transition: all 0.3s;
+
+                & .owl-prev,
+                & .owl-next {
+                    height: 100%;
+                    width: 50px;
+                    background-color: rgb(2 2 2 / 31%);
+                }
+
+                & :hover {
+                    background-color: rgb(2 2 2 / 50%);
+                    color: #fff;
+
+                    & span {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    /* content_2 */
+    & .content_2 {
+        & .display {
+            @include main.FlexBetCen;
+            flex-wrap: wrap;
+
+            & .img-slider, & .txt {
+                width: 550px;
+            }
+        }
+    }
+
+
+}

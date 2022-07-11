@@ -40,9 +40,8 @@ header {
     }
 
     &.capa_header {
-        background: url("../images/capaHeader.png");
+        background: url("../images/capaHeader.png") center;
         position: static;
-        height: 145px;
     }
 }
 

@@ -1,0 +1,85 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  OBRAS
+  ================================
+*/
+
+.obras {
+    padding-bottom: 60px;
+
+    & .container {
+        & .display {
+            @include main.FlexCenCen;
+            flex-wrap: wrap;
+            gap: 75px 80px;
+
+            & .item {
+                width: 390px;
+                height: 400px;
+
+                & img {
+                    border: solid 5px rgb(239, 235, 235);
+                    width: 100%;
+                    transition: all 0.3s;
+                }
+
+                & h3 {
+                    font-weight: 600;
+                    font-size: reset.toRem(20);
+                    margin-top: 30px;
+                    transition: all 0.3s;
+                }
+
+                & p {
+                    margin-bottom: 0;
+                    margin-top: 20px;
+                    transition: all 0.3s;
+                }
+
+                & span {
+                    font-size: reset.toRem(12);
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    color: main.$ColorZero;
+
+                    & img {
+                        border-color: main.$ColorMain;
+                    }
+
+                    & p {
+                        color: main.$ColorZero;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* LAPTOP - 1024px*/
+@include main.breakpoint(smashTabletBig) {
+    .obras {
+        & .container {
+            & .display {
+                gap: 30px;
+
+                & .item {
+
+                    & img {}
+
+                    & h3 {
+                        font-size: reset.toRem(18);
+                    }
+
+                    & p {}
+
+                    & span {}
+                }
+            }
+        }
+    }
+}
