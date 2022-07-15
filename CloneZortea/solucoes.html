@@ -35,8 +35,8 @@
                 <ul>
                     <li><a href="/CloneZortea/">Home</a></li>
                     <li><a href="empresa.html">A Empresa</a></li>
-                    <li><a href="#">Obras</a></li>
-                    <li><a href="#">Soluções</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="solucoes.html">Soluções</a></li>
                     <li><a href="#">Clientes</a></li>
                     <li><a href="#">Notícias</a></li>
                     <li><a href="#">Contato</a></li>
@@ -89,7 +89,7 @@
 
         <section class="display_solucoes">
             <div class="container">
-                <div class="owl-carousel owl-themes">
+                <div class="owl-carousel owl-one owl-themes">
                     <img src="images/solucao1.jpg" alt="Imagem Solução 01">
                     <img src="images/solucao2.jpg" alt="Imagem Solução 02">
                     <img src="images/solucao2.jpg" alt="Imagem Solução 02">
@@ -101,15 +101,19 @@
         <section class="content_2">
             <div class="container">
                 <div class="display">
-                    <div class="img-slider">
-                        <img src="images/item1.jpg" alt="Imagem Solução 01">
-                        <img src="images/item1.jpg" alt="Imagem Solução 01">
-                        <img src="images/item1.jpg" alt="Imagem Solução 01">
-                        <img src="images/item1.jpg" alt="Imagem Solução 01">
-                        <img src="images/item1.jpg" alt="Imagem Solução 01">
+                    <div class="owl-carousel owl-two owl-themes">
+                        <img src="images/carregamento1.jpg" alt="Imagem Carregamento 01">
+                        <img src="images/carregamento1.jpg" alt="Imagem Carregamento 01">
+                        <img src="images/carregamento1.jpg" alt="Imagem Carregamento 01">
+                        <img src="images/carregamento1.jpg" alt="Imagem Carregamento 01">
+                        <img src="images/carregamento1.jpg" alt="Imagem Carregamento 01">
                     </div>
                     <div class="txt">
                         <h2>SISTEMA DE CARREGAMENTO E DESCARREGAMENTO DE BARCAÇAS (PÍER FLUTUANTE)</h2>
+                        <p>Através de estudos detalhados junto a clientes tradicionais do agronegócio brasileiro,
+                            criamos um sistema de carregamento de barcaças cujo objetivo foi agilizar o transbordo de
+                            granéis, com menor impacto ambiental, menor custo construtivo e aproveitamento dos rios para
+                            transporte de produtos agrícolas em grande escala.</p>
                     </div>
                 </div><!-- display -->
             </div><!-- container -->
@@ -177,7 +181,7 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script type="text/javascript">
-        jQuery('.owl-carousel').owlCarousel({
+        jQuery('.owl-one').owlCarousel({
             loop: true,
             margin: 20,
             nav: true,
@@ -200,7 +204,7 @@
             }
         })
 
-        /* jQuery('.img-slider').owlCarousel({
+        jQuery('.owl-two').owlCarousel({
             loop: true,
             nav: true,
             autoplay: true,
@@ -209,9 +213,9 @@
             autoplayTimeout: 4000,
             autoplayHoverPause: true,
             items: 1
-        }) */
+        })
 
-        /*  var swiper = new Swiper(".mySwiper", {
+        /* var swiper = new Swiper(".mySwiper", {
              loop: true,
              autoplay: true,
              autoplayTimeout: 4000,
