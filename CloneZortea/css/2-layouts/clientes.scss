@@ -1,0 +1,72 @@
+@use '../1-base/main';
+@use '../1-base/reset';
+
+/* 
+  ================================
+  CLIENTES
+  ================================
+*/
+
+.clientes {
+
+    /* SUBTITLE */
+    & .subTitle {
+        position: relative;
+
+        & p {
+            font-size: reset.toRem(14);
+            color: main.$ColorMain;
+            margin-left: 120px;
+            position: absolute;
+            top: -55px;
+        }
+    }
+
+    /* LAPTOP - 1024px*/
+    @include main.breakpoint(smashLaptop) {
+        .subTitle {
+            & p {
+                position: relative;
+                margin: 0 auto;
+                margin-top: 20px;
+                text-align: center
+            }
+        }
+    }
+
+    /* LOGOS */
+    & .logos {
+        & .container {
+            & .display {
+                @include main.FlexCenCen;
+                gap: 50px;
+                flex-wrap: wrap;
+
+                & img {
+                    filter: grayscale(100%);
+                    transition: 0.3s;
+
+                    &:hover {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+
+    /* LAPTOP - 600px*/
+    @include main.breakpoint(smashTablet) {
+        .logos {
+            & .container {
+                & .display {
+                    gap: 20px;
+
+                    & img {
+                        width: 45%;
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+}

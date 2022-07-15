@@ -449,6 +449,9 @@ header.capa_header {
   FOOTER
   ================================
 */
+footer .container_small {
+  padding-top: 35px;
+}
 footer .container_small .menu {
   border-top: solid 1px #1EB4E1;
   border-bottom: solid 1px #1EB4E1;
@@ -1022,6 +1025,59 @@ footer .container_small .informations .social a:hover p {
   }
   .solucoes .content_2 p {
     text-align: center;
+  }
+}
+
+/* 
+  ================================
+  CLIENTES
+  ================================
+*/
+.clientes {
+  /* SUBTITLE */
+  /* LAPTOP - 1024px*/
+  /* LOGOS */
+  /* LAPTOP - 600px*/
+}
+.clientes .subTitle {
+  position: relative;
+}
+.clientes .subTitle p {
+  font-size: 0.875rem;
+  color: #023859;
+  margin-left: 120px;
+  position: absolute;
+  top: -55px;
+}
+@media (max-width: 64rem) {
+  .clientes .subTitle p {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+.clientes .logos .container .display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.clientes .logos .container .display img {
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+.clientes .logos .container .display img:hover {
+  filter: grayscale(0);
+}
+@media (max-width: 37.5rem) {
+  .clientes .logos .container .display {
+    gap: 20px;
+  }
+  .clientes .logos .container .display img {
+    width: 45%;
+    filter: grayscale(0);
   }
 }
 
