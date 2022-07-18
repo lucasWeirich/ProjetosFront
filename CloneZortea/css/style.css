@@ -1083,6 +1083,42 @@ footer .container_small .informations .social a:hover p {
 
 /* 
   ================================
+  NOTÍCIAS
+  ================================
+*/
+.noticias .list_noticias {
+  padding-bottom: 60px;
+}
+.noticias .list_noticias .container .owl-carousel {
+  display: flex;
+  justify-content: center;
+}
+.noticias .list_noticias .container .owl-carousel .item {
+  width: 320px;
+  padding: 10px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.noticias .list_noticias .container .owl-carousel .item img {
+  margin-bottom: 15px;
+}
+.noticias .list_noticias .container .owl-carousel .item .txt h4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #023859;
+  transition: all 0.5s;
+}
+.noticias .list_noticias .container .owl-carousel .item:hover {
+  background-color: #023859;
+}
+.noticias .list_noticias .container .owl-carousel .item:hover .txt h4 {
+  color: #F1F1F1;
+}
+
+/* 
+  ================================
   BUTTON
   ================================
 */

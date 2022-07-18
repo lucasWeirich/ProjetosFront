@@ -24,7 +24,7 @@
     <title>Clone - Estrutural Zortea</title>
 </head>
 
-<body class="clientes">
+<body class="noticias">
 
     <header class="capa_header">
         <div class="container_large">
@@ -38,8 +38,8 @@
                     <li><a href="obras.html">Obras</a></li>
                     <li><a href="solucoes.html">Soluções</a></li>
                     <li><a href="clientes.html">Clientes</a></li>
-                    <li><a href="#">Notícias</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
             <div class="menu-responsive">
@@ -52,30 +52,61 @@
 
         <section class="header_title">
             <div class="container">
-                <h1>NOSSOS CLIENTES</h1>
+                <h1>NOTÍCIAS</h1>
             </div><!-- container -->
         </section><!-- header_title -->
 
-        <section class="subTitle">
+        <section class="list_noticias">
             <div class="container">
-                <p>Conheça as empresas que confiam no nosso trabalho.</p>
-            </div><!-- container -->
-        </section><!-- subTitle -->
+                <div class="owl-carousel owl-themes">
 
-        <section class="logos">
-            <div class="container">
-                <div class="display">
-                    <a href="#"><img src="images/clientes/adm.jpg" alt="adm"></a>
-                    <a href="#"> <img src="images/clientes/agtl.jpg" alt="agtl"></a>
-                    <a href="#"> <img src="images/clientes/all.jpg" alt="all"></a>
-                    <a href="#"> <img src="images/clientes/adm.jpg" alt="adm"></a>
-                    <a href="#"> <img src="images/clientes/agtl.jpg" alt="agtl"></a>
-                    <a href="#"> <img src="images/clientes/all.jpg" alt="all"></a>
-                    <a href="#"> <img src="images/clientes/amaggi.jpg" alt="amaggi"></a>
-                    <a href="#"> <img src="images/clientes/amaggi.jpg" alt="amaggi"></a>
-                </div><!-- display -->
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/noticia.jpg" alt="noticia">
+                            <div class="txt">
+                                <h4>
+                                    10ª Semana Interna de Prevenção de Acidentes de Trabalho - SIPAT - ESTRUTURAL ZORTEA
+                                </h4>
+                            </div><!-- txt -->
+                        </a>
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/noticia.jpg" alt="noticia">
+                            <div class="txt">
+                                <h4>
+                                    10ª Semana Interna de Prevenção de Acidentes de Trabalho - SIPAT - ESTRUTURAL ZORTEA
+                                </h4>
+                            </div><!-- txt -->
+                        </a>
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/noticia.jpg" alt="noticia">
+                            <div class="txt">
+                                <h4>
+                                    10ª Semana Interna de Prevenção de Acidentes de Trabalho - SIPAT - ESTRUTURAL ZORTEA
+                                </h4>
+                            </div><!-- txt -->
+                        </a>
+                    </div><!-- item -->
+
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/noticia.jpg" alt="noticia">
+                            <div class="txt">
+                                <h4>
+                                    10ª Semana Interna de Prevenção de Acidentes de Trabalho - SIPAT - ESTRUTURAL ZORTEA
+                                </h4>
+                            </div><!-- txt -->
+                        </a>
+                    </div><!-- item -->
+
+                </div><!-- owl-carousel -->
             </div><!-- container -->
-        </section><!-- logos -->
+        </section><!-- list_noticias -->
 
     </main><!-- main-content -->
 
@@ -139,10 +170,9 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script type="text/javascript">
-        /* jQuery('.owl-carousel').owlCarousel({
-            loop: true,
+        jQuery('.owl-carousel').owlCarousel({
+            loop: false,
             margin: 20,
-            nav: true,
             autoplay: true,
             paginationSpeed: 300,
             rewindSpeed: 400,
@@ -160,7 +190,7 @@
                     items: 3
                 }
             }
-        }) */
+        })
 
         /* var swiper = new Swiper(".mySwiper", {
              loop: true,
