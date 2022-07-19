@@ -1,0 +1,61 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  FORMS
+  ================================
+*/
+
+.forms {
+
+  & select,
+  & input,
+  & textarea {
+    display: flex;
+    width: 100%;
+    padding: reset.toRem(18) reset.toRem(16);
+    padding-left: 25px;
+    font-size: reset.toRem(15);
+    border-radius: 5px;
+    height: 55px;
+    border: #e3e2e2 solid 1px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 1s;
+  }
+
+  & label {
+    display: block;
+    margin-bottom: 10px;
+    color: main.$ColorOne;
+
+    font: {
+      size: reset.toRem(15);
+      weight: 400;
+    }
+
+  }
+
+  & select:focus,
+  & input:focus,
+  & textarea:focus {
+    border-color: main.$ColorFour;
+  }
+
+  & .btn {
+    @include main.FlexCenCen;
+
+    & input[type="submit"] {
+      background-color: main.$ColorMain;
+      color: #fff;
+      display: flex;
+      width: 130px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+      padding: 0px 35px;
+    }
+  }
+
+}

@@ -1119,6 +1119,113 @@ footer .container_small .informations .social a:hover p {
 
 /* 
   ================================
+  CONTATO
+  ================================
+*/
+.contato {
+  /* DESKTOP - 1024px*/
+  /* TABLET BIG - 900px*/
+  /* maps */
+}
+.contato .content_1 .container .display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+}
+.contato .content_1 .container .display .forms {
+  width: 70%;
+  padding: 50px;
+  padding-bottom: 95px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 90px rgba(34, 34, 34, 0.21);
+  position: relative;
+}
+.contato .content_1 .container .display .forms .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contato .content_1 .container .display .forms .btn {
+  position: absolute;
+  right: 50px;
+}
+.contato .content_1 .container .display .informations {
+  width: 300px;
+  padding-left: 15px;
+  align-items: flex-start;
+}
+.contato .content_1 .container .display .informations h2 {
+  margin: 30px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.contato .content_1 .container .display .informations .list h4 {
+  margin-bottom: 2px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.contato .content_1 .container .display .informations .list a {
+  display: block;
+  margin-bottom: 20px;
+  color: #023859;
+  padding-left: 30px;
+  background: url("../images/iconEmail.png") no-repeat left center;
+  transition: all 0.3s;
+  font-size: 0.875rem;
+}
+.contato .content_1 .container .display .informations .list a:hover {
+  color: #d53a2f;
+}
+.contato .content_1 .container .display .informations ul {
+  margin-top: 35px;
+}
+.contato .content_1 .container .display .informations ul li {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+@media (max-width: 64rem) {
+  .contato .content_1 .container {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .contato .content_1 .container .display {
+    flex-wrap: wrap;
+  }
+  .contato .content_1 .container .display .forms {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 75px;
+  }
+  .contato .content_1 .container .display .informations {
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+@media (max-width: 56.25rem) {
+  .contato .content_1 .container .display .forms .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contato .content_1 .container .display .forms .row div {
+    width: 100% !important;
+  }
+  .contato .content_1 .container .display .informations {
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
+.contato .maps {
+  margin-top: 30px;
+}
+
+/* 
+  ================================
   BUTTON
   ================================
 */
@@ -1150,6 +1257,7 @@ footer .container_small .informations .social a:hover p {
 }
 .header_title .container h1 {
   margin-left: 120px;
+  text-transform: uppercase;
 }
 .header_title .container h1::before {
   content: "";
@@ -1173,6 +1281,49 @@ footer .container_small .informations .social a:hover p {
   .header_title .container h1::before {
     display: none;
   }
+}
+/* 
+  ================================
+  FORMS
+  ================================
+*/
+.forms select, .forms input, .forms textarea {
+  display: flex;
+  width: 100%;
+  padding: 1.125rem 1rem;
+  padding-left: 25px;
+  font-size: 0.9375rem;
+  border-radius: 5px;
+  height: 55px;
+  border: #e3e2e2 solid 1px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: all 1s;
+}
+.forms label {
+  display: block;
+  margin-bottom: 10px;
+  color: #03738C;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.forms select:focus, .forms input:focus, .forms textarea:focus {
+  border-color: #1EB4E1;
+}
+.forms .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forms .btn input[type=submit] {
+  background-color: #023859;
+  color: #fff;
+  display: flex;
+  width: 130px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding: 0px 35px;
 }
 
 /*# sourceMappingURL=style.css.map */

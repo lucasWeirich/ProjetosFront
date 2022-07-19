@@ -1,0 +1,166 @@
+@use '../1-base/main';
+@use '../1-base/reset';
+
+/* 
+  ================================
+  CONTATO
+  ================================
+*/
+
+.contato {
+    & .content_1 {
+        & .container {
+            & .display {
+                @include main.FlexBetCen;
+                align-items: flex-start;
+
+                & .forms {
+                    width: 70%;
+                    padding: 50px;
+                    padding-bottom: 95px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    box-shadow: 0 1px 90px rgb(34 34 34 / 21%);
+                    position: relative;
+
+                    & .row {
+                        @include main.FlexBetCen;
+                    }
+
+                    & .btn {
+                        position: absolute;
+                        right: 50px;
+                    }
+                }
+
+                & .informations {
+                    width: 300px;
+                    padding-left: 15px;
+                    align-items: flex-start;
+
+                    & h2 {
+                        margin: 30px 0;
+
+                        font: {
+                            size: reset.toRem(18);
+                            weight: 600;
+                        }
+
+                    }
+
+                    & .list {
+                        & h4 {
+                            margin-bottom: 2px;
+
+                            font: {
+                                size: reset.toRem(14);
+                                weight: 600;
+                            }
+
+                        }
+
+                        & a {
+                            display: block;
+                            margin-bottom: 20px;
+                            color: main.$ColorMain;
+                            padding-left: 30px;
+                            background: url("../images/iconEmail.png") no-repeat left center;
+                            transition: all 0.3s;
+
+                            font: {
+                                size: reset.toRem(14);
+                            }
+
+                            &:hover {
+                                color: main.$ColorZero;
+                            }
+                        }
+                    }
+
+                    & ul {
+                        margin-top: 35px;
+
+                        & li {
+                            font: {
+                                size: reset.toRem(14);
+                                weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* DESKTOP - 1024px*/
+    @include main.breakpoint(smashLaptop) {
+
+        .content_1 {
+            & .container {
+                width: 100%;
+
+                padding: {
+                    left: 0 !important;
+                    right: 0 !important;
+                }
+
+                & .display {
+                    flex-wrap: wrap;
+
+                    & .forms {
+                        width: 90%;
+                        margin: 0 auto;
+
+                        padding: {
+                            left: 10px;
+                            right: 10px;
+                            top: 20px;
+                            bottom: 75px;
+                        }
+
+                    }
+
+                    & .informations {
+                        margin: 0 auto;
+                        padding: 30px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* TABLET BIG - 900px*/
+    @include main.breakpoint(smashTabletBig) {
+
+        .content_1 {
+            & .container {
+                & .display {
+
+                    & .forms {
+
+                        & .row {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            & div {
+                                width: 100% !important;
+                            }
+                        }
+
+                    }
+
+                    & .informations {
+                        margin: 0 auto;
+                        padding: 30px 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* maps */
+    & .maps {
+        margin-top: 30px;
+    }
+}
