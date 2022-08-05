@@ -1,0 +1,39 @@
+// --------------------------------------
+// BUTTON CSS
+// --------------------------------------
+
+.input {
+    position: relative;
+    width: 70%;
+
+    & label {
+        background-color: #fff;
+        position: absolute;
+        left: 70px;
+        bottom: 43px;
+        font-size: 18px;
+        color: #41b3ba;
+        text-shadow: 1px 1px #275154;
+
+        padding: {
+            bottom: 5px;
+            top: 5px;
+            left: 15px;
+            right: 15px;
+        }
+    }
+
+    & input {
+        height: 60px;
+        width: 100%;
+        outline: none;
+        border: solid 2px #216435;
+        border-radius: 10px;
+        padding-left: 20px;
+
+        font: {
+            size: 20px;
+            weight: 500;
+        }
+    }
+}

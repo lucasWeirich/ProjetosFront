@@ -1,0 +1,56 @@
+@use 'reset';
+@use 'modules/modules.scss';
+@use 'layouts/layout.scss';
+
+/* ---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------- */
+
+h1 {
+    text-align: center;
+    color: rgb(45, 28, 77);
+    transition: all 0.3s;
+
+    font: {
+        size: 40px;
+        weight: 600;
+    }
+
+    margin: {
+        bottom: 40px;
+        top: 40px;
+    }
+
+    &:hover {
+        color: rgb(86, 57, 140);
+    }
+}
+
+.subTitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    & h2 {
+        color: rgb(24, 94, 45);
+        transition: all 0.3s;
+
+        font: {
+            size: 30px;
+            weight: 600;
+        }
+
+        margin: {
+            top: 10px;
+        }
+
+        &:hover {
+            color: rgb(52, 182, 48);
+        }
+    }
+
+    & p {
+        font: {
+            size: 20px;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+// --------------------------------------
+// GALLERY IMAGE 01
+// --------------------------------------
+.style01 {
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background-color: #fff;
+
+    padding: {
+        top: 10px;
+        bottom: 50px;
+    }
+
+    & .gallery_image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+
+        & .image {
+            width: 45%;
+            overflow: hidden;
+            cursor: zoom-in;
+            position: relative;
+
+            &:nth-child(1) {
+                border-radius: 100% 10px 0 10px;
+            }
+
+            &:nth-child(2) {
+                border-radius: 10px 100% 10px 0;
+            }
+
+            &:nth-child(3) {
+                border-radius: 10px 0 10px 100%;
+            }
+
+            &:nth-child(4) {
+                border-radius: 0 10px 100% 10px;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0.3;
+                }
+            }
+
+            &.active {
+                border-radius: 10px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                cursor: zoom-out;
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

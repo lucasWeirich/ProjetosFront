@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Gallery Images</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Gallerys Images</h1>
+
+        <!-- ---------------------------------------------------------------------------------------
+        -------------------------------------- EXAMPLE 01 ------------------------------------------            
+        ---------------------------------------------------------------------------------------- -->
+
+        <div class="style01">
+            <div class="subTitle">
+                <h2>Gallery 01</h2>
+                <p>Gallery image - custom stastic</p>
+            </div><!-- subTitle -->
+
+            <div class="gallery_image">
+                <div class="image">
+                    <img src="images/image01.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/image01.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/image01.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="images/image01.jpg" alt="">
+                </div>
+            </div><!-- gallery_image -->
+        </div><!-- style01 -->
+
+        <!-- ---------------------------------------------------------------------------------------
+        -------------------------------------- EXAMPLE 02 ------------------------------------------            
+        ---------------------------------------------------------------------------------------- -->
+
+        <div class="style02">
+            <div class="subTitle">
+                <h2>Gallery 02</h2>
+                <p>Gallery image - custom dinamic</p>
+            </div><!-- subTitle -->
+
+            <div class="searchPhoto">
+                <div class="input">
+                    <label for="search">Search the image</label>
+                    <input type="text" id="search" value="car">
+                </div>
+                <button id="search-button" class="button" role="button">Search Photos</button>
+            </div>
+
+            <div class="gallery_image">
+                <div class="collums --1">
+                    <div class="image"><img src="images/image01.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image03.jpg" alt=""></div>
+                    <div class="image"><img src="images/image04.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                </div><!-- collums -->
+
+                <div class="collums --2">
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image01.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image04.jpg" alt=""></div>
+                    <div class="image"><img src="images/image03.jpg" alt=""></div>
+                </div><!-- collums -->
+
+                <div class="collums --3">
+                    <div class="image"><img src="images/image04.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image03.jpg" alt=""></div>
+                    <div class="image"><img src="images/image01.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                </div><!-- collums -->
+            </div><!-- gallery_image -->
+        </div><!-- style02 -->
+
+    </div><!-- container -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/gallery_image02.js"></script>
+    <script>
+
+        // Script for example in the gallery image 01.
+        // Function for zoom-in and zoom-out.
+        $('.style01 .gallery_image').on('click', '.image', function () {
+            $(this).toggleClass('active');
+        });
+
+
+    </script>
+
+</body>
+
+</html>
