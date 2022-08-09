@@ -1,3 +1,34 @@
+// -------------------------------------------------------------------------------------
+//Script for open fancybox images
+$('.style02 .gallery_image').on('click', '.image', function () {
+    $('.popup .img').remove();
+
+    const src = $(this).find('img').attr('src');
+    const alt = $(this).find('img').prop('alt');
+
+    const element = `
+                <div class="img">
+                    <img src="${src}" alt="${alt}">
+                    <span>${alt}</span> 
+                </div>
+            `
+
+    $('.popup .content').append(element);
+
+    $('.popup').addClass('active');
+})
+
+//Script for close fancybox images
+$('.popup').on('click', (e) => {
+    if (e.target.className == "content" || e.target.id == "close_popup") {
+        $('.popup').removeClass('active');
+    }
+})
+
+
+// -------------------------------------------------------------------------------------
+// Script for get images
+
 $('.style02 #search-button').on('click', function () {
     const search = document.getElementById('search').value;
     searchPhotos(url_base, cliente_id, search);
@@ -48,24 +79,7 @@ function searchPhotos(api, id, search) {
 
                     $(`.style02 .gallery_image .--${i}`).append(element);
                 }
-
-                /*  console.log(
-                     randoms[i],
-                     data.results[randoms[i]].urls.thumb
-                 );
- 
-                 const image = data.results[randoms[i]].urls.thumb;
- 
- 
-                 const element = `
-                     <div class="image">
-                         <img src="${image}" alt="">
-                     </div>
-                 `; */
-
-                /* $(".gallery_image").append(element); */
             }
         }
     })
 }
-

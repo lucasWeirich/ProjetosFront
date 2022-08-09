@@ -260,6 +260,78 @@ body {
   font-weight: 500;
 }
 
+.popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: collapse;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.popup .content {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.popup .content .img {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.popup .content .img img {
+  order: 0;
+  width: 100%;
+}
+.popup .content .img span {
+  order: 1;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 19, 19, 0.849);
+  font-size: 18px;
+  font-style: italic;
+}
+.popup #close_popup {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  opacity: 0.3;
+}
+.popup #close_popup:hover {
+  opacity: 1;
+}
+.popup #close_popup::before, .popup #close_popup::after {
+  position: absolute;
+  left: 15px;
+  content: "";
+  height: 33px;
+  width: 2px;
+  background-color: #fff;
+}
+.popup #close_popup::before {
+  transform: rotate(45deg);
+}
+.popup #close_popup::after {
+  transform: rotate(-45deg);
+}
+
 .style01 {
   margin-bottom: 50px;
   border-radius: 20px;
@@ -363,6 +435,51 @@ body {
 }
 .style02 .gallery_image .collums .image:hover::after {
   opacity: 0.3;
+}
+
+.style03 {
+  margin-bottom: 50px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.style03 .gallery_image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.style03 .gallery_image .image_main {
+  width: 50%;
+}
+.style03 .gallery_image .image_main img {
+  width: 100%;
+  border-radius: 20px;
+}
+.style03 .gallery_image .all_images {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: auto;
+  margin-top: 30px;
+}
+.style03 .gallery_image .all_images .image {
+  width: 10%;
+}
+.style03 .gallery_image .all_images .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.style03 .gallery_image .all_images .image img:hover {
+  opacity: 1;
 }
 
 /* ---------------------------------------------------

@@ -61,46 +61,85 @@
 
             <div class="gallery_image">
                 <div class="collums --1">
-                    <div class="image"><img src="images/image01.jpg" alt=""></div>
-                    <div class="image"><img src="images/image02.jpg" alt=""></div>
-                    <div class="image"><img src="images/image03.jpg" alt=""></div>
-                    <div class="image"><img src="images/image04.jpg" alt=""></div>
-                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image01.jpg" alt="Legenda Image Collums 01"></div>
+                    <div class="image"><img src="images/image02.jpg" alt="Legenda Image Collums 01"></div>
+                    <div class="image"><img src="images/image03.jpg" alt="Legenda Image Collums 01"></div>
+                    <div class="image"><img src="images/image04.jpg" alt="Legenda Image Collums 01"></div>
+                    <div class="image"><img src="images/image02.jpg" alt="Legenda Image Collums 01"></div>
                 </div><!-- collums -->
 
                 <div class="collums --2">
-                    <div class="image"><img src="images/image02.jpg" alt=""></div>
-                    <div class="image"><img src="images/image01.jpg" alt=""></div>
-                    <div class="image"><img src="images/image02.jpg" alt=""></div>
-                    <div class="image"><img src="images/image04.jpg" alt=""></div>
-                    <div class="image"><img src="images/image03.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt="Legenda Image Collums 02"></div>
+                    <div class="image"><img src="images/image01.jpg" alt="Legenda Image Collums 02"></div>
+                    <div class="image"><img src="images/image02.jpg" alt="Legenda Image Collums 02"></div>
+                    <div class="image"><img src="images/image04.jpg" alt="Legenda Image Collums 02"></div>
+                    <div class="image"><img src="images/image03.jpg" alt="Legenda Image Collums 02"></div>
                 </div><!-- collums -->
 
                 <div class="collums --3">
-                    <div class="image"><img src="images/image04.jpg" alt=""></div>
-                    <div class="image"><img src="images/image02.jpg" alt=""></div>
-                    <div class="image"><img src="images/image03.jpg" alt=""></div>
-                    <div class="image"><img src="images/image01.jpg" alt=""></div>
-                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image04.jpg" alt="Legenda Image Collums 03"></div>
+                    <div class="image"><img src="images/image02.jpg" alt="Legenda Image Collums 03"></div>
+                    <div class="image"><img src="images/image03.jpg" alt="Legenda Image Collums 03"></div>
+                    <div class="image"><img src="images/image01.jpg" alt="Legenda Image Collums 03"></div>
+                    <div class="image"><img src="images/image02.jpg" alt="Legenda Image Collums 03"></div>
                 </div><!-- collums -->
             </div><!-- gallery_image -->
         </div><!-- style02 -->
 
+        <!-- ---------------------------------------------------------------------------------------
+        -------------------------------------- EXAMPLE 03 ------------------------------------------            
+        ---------------------------------------------------------------------------------------- -->
+
+        <div class="style03">
+            <div class="subTitle">
+                <h2>Gallery 03</h2>
+                <p>Gallery image - custom stastic</p>
+            </div><!-- subTitle -->
+
+            <div class="gallery_image">
+
+                <div class="image_main">
+                    <img src="images/image01.jpg" alt="">
+                </div>
+
+                <div class="all_images">
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image01.jpg" alt=""></div>
+                    <div class="image"><img src="images/image03.jpg" alt=""></div>
+                    <div class="image"><img src="images/image04.jpg" alt=""></div>
+                    <div class="image"><img src="images/image02.jpg" alt=""></div>
+                    <div class="image"><img src="images/image03.jpg" alt=""></div>
+                </div><!-- all_images -->
+            </div><!-- gallery_image -->
+
+            <button id="search-button" class="button" role="button">View history</button>
+        </div><!-- style02 -->
+
     </div><!-- container -->
 
+    <!-- Popup of images -->
+    <div class="popup">
+        <div class="content">
+            <div class="img">
+                <img src="images/image03.jpg" alt="">
+                <span>Legenda</span>
+            </div>
+        </div><!-- content -->
+        <a id="close_popup"></a>
+    </div><!-- popup -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/gallery_image02.js"></script>
+    <script src="js/gallery_image03.js"></script>
     <script>
 
         // Script for example in the gallery image 01.
         // Function for zoom-in and zoom-out.
-        $('.style01 .gallery_image').on('click', '.image', function () {
+        $('.style01 .gallery_image').on('click', '.image', () => {
             $(this).toggleClass('active');
         });
-
 
     </script>
 
