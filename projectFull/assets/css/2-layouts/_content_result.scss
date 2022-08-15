@@ -1,0 +1,200 @@
+@use '../1-base/reset.scss';
+@use '../1-base/main.scss';
+
+/* 
+  ================================
+  CONTENT RESULT
+  ================================
+*/
+
+.content_result {
+    & .container_small {
+        & .title {
+            background: url('../images/icons/pick.png') no-repeat left 40px;
+
+            padding: {
+                top: 130px;
+                bottom: 40px;
+            }
+
+            & h2 {
+                color: #000;
+            }
+        }
+
+        & .display {
+            @include main.FlexCenCen;
+            flex-wrap: wrap;
+            gap: 25px 30px;
+
+            & .__item {
+                width: 205px;
+                height: 245px;
+                background-color: #fff;
+                border-radius: 10px;
+                position: relative;
+
+                & .image {
+                    width: 100%;
+                    height: 70%;
+                    @include main.FlexCenCen;
+
+                    & img {
+                        width: 55%;
+                    }
+                }
+
+                & h3 {
+                    line-height: 30px;
+
+                    font: {
+                        size: reset.toRem(20);
+                    }
+
+                    padding: {
+                        left: 20px;
+                    }
+
+                    margin: {
+                        bottom: 0;
+                    }
+                }
+
+                & .informations {
+                    width: 100%;
+                    @include main.FlexBetCen;
+
+                    padding: {
+                        left: 20px;
+                        right: 20px;
+                    }
+
+                    & .price {
+                        & span {
+                            color: main.$ColorMain;
+
+                            font: {
+                                size: reset.toRem(20);
+                                weight: 600;
+                            }
+                        }
+                    }
+
+                    & .details {
+                        display: flex;
+                        justify-content: end;
+
+                        & .toxicity,
+                        & .sun,
+                        & .water {
+                            display: flex;
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        & .toxicity {
+                            &.--yes {
+                                background: url('../images/icons/toxicity_yes.png') no-repeat center center;
+                            }
+
+                            &.--no {
+                                background: url('../images/icons/toxicity_no.png') no-repeat center center;
+                            }
+                        }
+
+                        & .sun {
+                            &.--high {
+                                background: url('../images/icons/sun_high.png') no-repeat center center;
+                            }
+
+                            &.--low {
+                                background: url('../images/icons/sun_low.png') no-repeat center center;
+                            }
+
+                            &.--no {
+                                background: url('../images/icons/sun_no.png') no-repeat center center;
+                            }
+                        }
+
+                        & .water {
+                            &.--ever {
+                                background: url('../images/icons/water_one.png') no-repeat center center;
+                            }
+
+                            &.--regulary {
+                                background: url('../images/icons/water_two.png') no-repeat center center;
+                            }
+
+                            &.--rarely {
+                                background: url('../images/icons/water_three.png') no-repeat center center;
+                            }
+                        }
+                    }
+                }
+
+                // favorite
+                &.--favorite {
+                    width: 440px;
+                    height: 510px;
+
+                    &::after {
+                        content: "Staff favorite";
+                        width: 185px;
+                        background: #75bc97 url('../images/icons/favorite.png') no-repeat 2px center;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        border-radius: 0 30px 30px 0;
+
+                        position: absolute;
+                        left: 0;
+                        top: 35px;
+
+                        font: {
+                            size: reset.toRem(18);
+                            weight: 600;
+                        }
+
+                        padding: {
+                            top: 10px;
+                            bottom: 10px;
+                            left: 30px;
+                        }
+                    }
+
+                    & .image {
+                        & img {
+                            width: auto;
+                        }
+                    }
+
+                    & h3 {
+                        max-width: 250px;
+                        line-height: 50px;
+
+                        font-size: reset.toRem(45);
+                    }
+
+                    & .informations {
+                        width: 180px;
+                        position: absolute;
+                        right: 0;
+                        bottom: 60px;
+
+                        & .price {
+                            & span {
+                                display: flex;
+                                justify-content: end;
+
+                                font: {
+                                    size: reset.toRem(30);
+                                }
+                            }
+                        }
+
+                        //& .details {}
+                    }
+                }
+            }
+        }
+    }
+}

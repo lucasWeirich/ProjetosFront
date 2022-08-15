@@ -1,7 +1,7 @@
 @use 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 // CONTAINER VARIABLE
-$SmallContainer: reset.toRem(1120); // Adicionar 40px no valor do container para uso de padding no responsivo 
+$SmallContainer: reset.toRem(955); // Adicionar 40px no valor do container para uso de padding no responsivo 
 $Container: reset.toRem(1380); // Adicionar 40px no valor do container para uso de padding no responsivo 
 $LargeContainer: reset.toRem(1660); // Adicionar 40px no valor do container para uso de padding no responsivo 
 
@@ -12,7 +12,7 @@ $ColorZero: #15573F; //  Buttons e inputs
 $ColorOne: #797979; //   Text emphasis
 $ColorTwo: #848484; //   Text Default
 $ColorThree: #A9A9A9; // Text of loading
-$ColorFour: #F2F2F2; //  Background
+$ColorFour: #F6F6F6; //  Background
 
 // DISPLAY FLEX
 @mixin FlexBetCen {
@@ -54,6 +54,10 @@ p {
 
 span {
     color: $ColorOne;
+
+    font: {
+        weight: bold
+    }
 }
 
 h1,

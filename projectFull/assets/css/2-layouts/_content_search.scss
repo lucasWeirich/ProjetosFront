@@ -1,0 +1,58 @@
+@use '../1-base/reset.scss';
+@use '../1-base/main.scss';
+
+/* 
+  ================================
+  CONTENT SEARCH
+  ================================
+*/
+
+.content_search {
+    background-color: #fff;
+
+    & .container_small {
+        & .display {
+            height: 300px;
+            @include main.FlexBetCen;
+            animation: display-search 2s;
+
+            @keyframes display-search {
+                from {
+                    opacity: 0;
+                    transform: scale(0.2);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            & .__item {
+                width: 220px;
+                transition: all 2s;
+
+                padding: {
+                    top: 100px;
+                }
+
+
+                &.--sun {
+                    background: url('../images/icons/sun.png') no-repeat top left;
+                }
+
+                &.--water {
+                    background: url('../images/icons/water.png') no-repeat top left;
+                }
+
+                &.--chew {
+                    background: url('../images/icons/chew.png') no-repeat top left;
+                }
+
+                &:hover {
+                    background-position: top center;
+                }
+            }
+        }
+    }
+}

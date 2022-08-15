@@ -1,0 +1,53 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  INPUTS
+  ================================
+*/
+
+.inputs {
+
+  & input,
+  & select {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    color: main.$ColorOne;
+    letter-spacing: 0.8px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+
+    & option {
+      background-color: #75bc97;
+      color: #fff;
+
+      font: {
+        size: reset.toRem(15);
+      }
+
+      &:hover {
+        background-color: main.$ColorMain;
+      }
+    }
+
+    &:focus {
+      border-radius: 20px 20px 0 0;
+      border: solid 1px main.$ColorMain;
+      border-bottom: none;
+      box-shadow: 0 0 15px #90aaa0;
+    }
+  }
+
+  & select {
+    -webkit-appearance: none;
+    background: url('../images/icons/icon_select.png') no-repeat right 15px center;
+  }
+}

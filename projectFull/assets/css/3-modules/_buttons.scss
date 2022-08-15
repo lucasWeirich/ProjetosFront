@@ -1,0 +1,40 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  BUTTONS
+  ================================
+*/
+
+.buttons {
+
+    & a,
+    & button {
+        width: 100%;
+        height: 40px;
+        @include main.FlexCenCen;
+        color: main.$ColorZero;
+        border: solid 1px main.$ColorZero;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        font: {
+            size: reset.toRem(16);
+            weight: 600;
+        }
+
+        margin: {
+            top: 30px;
+            bottom: 30px;
+        }
+
+        &:hover {
+            background-color: main.$ColorMain;
+            color: #fff;
+            border-radius: 8px;
+            transform: scale(1.1);
+        }
+    }
+}

@@ -155,7 +155,7 @@ img {
 
 /**/
 body {
-  background: #F2F2F2;
+  background: #F6F6F6;
   font-family: "Sen", sans-serif;
   color: #848484;
   font-weight: 400;
@@ -173,6 +173,7 @@ p {
 
 span {
   color: #797979;
+  font-weight: bold;
 }
 
 h1,
@@ -211,7 +212,7 @@ h4 {
 }
 
 .container_small {
-  max-width: 70rem;
+  max-width: 59.6875rem;
 }
 
 .container {
@@ -227,10 +228,368 @@ h4 {
   HEADER
   ================================
 */
+header {
+  height: 500px;
+  background: url("../images/elements/Rectangle.WebP");
+  z-index: -1;
+}
+header .leaves {
+  height: inherit;
+  position: absolute;
+  z-index: 0;
+}
+header .leaves.left {
+  width: 890px;
+  background: url("../images/elements/left-leaves.WebP") no-repeat left;
+  animation: leaves-left 2s;
+}
+@keyframes leaves-left {
+  from {
+    left: -890px;
+  }
+  to {
+    left: 0;
+  }
+}
+header .leaves.right {
+  width: 360px;
+  right: 0;
+  background: url("../images/elements/right-leaves.WebP") no-repeat;
+  animation: leaves-right 2s;
+}
+@keyframes leaves-right {
+  from {
+    right: -360px;
+  }
+  to {
+    right: 0;
+  }
+}
+header .plantperson {
+  width: 400px;
+  height: inherit;
+  background: url("../images/elements/plantperson.WebP") no-repeat;
+  position: absolute;
+  right: 20%;
+  top: 35px;
+  animation: plantperson 2s;
+}
+@keyframes plantperson {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+header .container_small {
+  position: relative;
+}
+header .container_small .title {
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  animation-name: header-title;
+  animation-duration: 2s;
+}
+header .container_small .title h1 {
+  margin-top: 30px;
+  color: #fff;
+}
+header .container_small .title .arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  cursor: pointer;
+  background: url("../images/icons/arrow.png") no-repeat;
+}
+@keyframes header-title {
+  from {
+    opacity: 0.5;
+    transform: scale(0);
+    margin-top: -300px;
+    margin-left: -500px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header .container_small .title h4 a {
+  color: #fff;
+  transition: all 0.3s;
+}
+header .container_small .title h4 a:hover {
+  color: #A9A9A9;
+}
+
 /* 
   ================================
-  BUTTON
+  CONTENT SEARCH
   ================================
 */
+.content_search {
+  background-color: #fff;
+}
+.content_search .container_small .display {
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: display-search 2s;
+}
+@keyframes display-search {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.content_search .container_small .display .__item {
+  width: 220px;
+  transition: all 2s;
+  padding-top: 100px;
+}
+.content_search .container_small .display .__item.--sun {
+  background: url("../images/icons/sun.png") no-repeat top left;
+}
+.content_search .container_small .display .__item.--water {
+  background: url("../images/icons/water.png") no-repeat top left;
+}
+.content_search .container_small .display .__item.--chew {
+  background: url("../images/icons/chew.png") no-repeat top left;
+}
+.content_search .container_small .display .__item:hover {
+  background-position: top center;
+}
+
+/* 
+  ================================
+  CONTENT RESULT
+  ================================
+*/
+.content_result .container_small .title {
+  background: url("../images/icons/pick.png") no-repeat left 40px;
+  padding-top: 130px;
+  padding-bottom: 40px;
+}
+.content_result .container_small .title h2 {
+  color: #000;
+}
+.content_result .container_small .display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px 30px;
+}
+.content_result .container_small .display .__item {
+  width: 205px;
+  height: 245px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.content_result .container_small .display .__item .image {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_result .container_small .display .__item .image img {
+  width: 55%;
+}
+.content_result .container_small .display .__item h3 {
+  line-height: 30px;
+  font-size: 1.25rem;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+.content_result .container_small .display .__item .informations {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.content_result .container_small .display .__item .informations .price span {
+  color: #1E6B4E;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.content_result .container_small .display .__item .informations .details {
+  display: flex;
+  justify-content: end;
+}
+.content_result .container_small .display .__item .informations .details .toxicity, .content_result .container_small .display .__item .informations .details .sun, .content_result .container_small .display .__item .informations .details .water {
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+.content_result .container_small .display .__item .informations .details .toxicity.--yes {
+  background: url("../images/icons/toxicity_yes.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .toxicity.--no {
+  background: url("../images/icons/toxicity_no.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .sun.--high {
+  background: url("../images/icons/sun_high.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .sun.--low {
+  background: url("../images/icons/sun_low.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .sun.--no {
+  background: url("../images/icons/sun_no.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .water.--ever {
+  background: url("../images/icons/water_one.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .water.--regulary {
+  background: url("../images/icons/water_two.png") no-repeat center center;
+}
+.content_result .container_small .display .__item .informations .details .water.--rarely {
+  background: url("../images/icons/water_three.png") no-repeat center center;
+}
+.content_result .container_small .display .__item.--favorite {
+  width: 440px;
+  height: 510px;
+}
+.content_result .container_small .display .__item.--favorite::after {
+  content: "Staff favorite";
+  width: 185px;
+  background: #75bc97 url("../images/icons/favorite.png") no-repeat 2px center;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0 30px 30px 0;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+.content_result .container_small .display .__item.--favorite .image img {
+  width: auto;
+}
+.content_result .container_small .display .__item.--favorite h3 {
+  max-width: 250px;
+  line-height: 50px;
+  font-size: 2.8125rem;
+}
+.content_result .container_small .display .__item.--favorite .informations {
+  width: 180px;
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+}
+.content_result .container_small .display .__item.--favorite .informations .price span {
+  display: flex;
+  justify-content: end;
+  font-size: 1.875rem;
+}
+
+/* 
+  ================================
+  INPUTS
+  ================================
+*/
+.inputs input, .inputs select {
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  color: #797979;
+  letter-spacing: 0.8px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.inputs input option, .inputs select option {
+  background-color: #75bc97;
+  color: #fff;
+  font-size: 0.9375rem;
+}
+.inputs input option:hover, .inputs select option:hover {
+  background-color: #1E6B4E;
+}
+.inputs input:focus, .inputs select:focus {
+  border-radius: 20px 20px 0 0;
+  border: solid 1px #1E6B4E;
+  border-bottom: none;
+  box-shadow: 0 0 15px #90aaa0;
+}
+.inputs select {
+  -webkit-appearance: none;
+  background: url("../images/icons/icon_select.png") no-repeat right 15px center;
+}
+
+/* 
+  ================================
+  BUTTONS
+  ================================
+*/
+.buttons a, .buttons button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #15573F;
+  border: solid 1px #15573F;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.buttons a:hover, .buttons button:hover {
+  background-color: #1E6B4E;
+  color: #fff;
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+
+/* 
+  ================================
+  NOT FOUND
+  ================================
+*/
+.not_found.--hidden {
+  display: none;
+}
+.not_found .container_small {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  background: url("../images/icons/clip.png") no-repeat right 60px center;
+  animation: not-found 4s;
+}
+.not_found .container_small .txt h2, .not_found .container_small .txt p {
+  color: #A9A9A9;
+  transition: all 0.5s;
+}
+.not_found .container_small .txt h2:hover, .not_found .container_small .txt p:hover {
+  color: #1E6B4E;
+}
+.not_found .container_small .txt p {
+  max-width: 270px;
+  font-size: 1.125rem;
+}
+@keyframes not-found {}
 
 /*# sourceMappingURL=style.css.map */

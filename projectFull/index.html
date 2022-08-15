@@ -6,10 +6,218 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>Project Front - Full</title>
 </head>
 
 <body>
+
+    <header>
+
+        <div class="leaves left"></div>
+        <div class="plantperson"></div>
+        <div class="leaves right"></div>
+
+        <div class="container_small">
+            <div class="title">
+
+                <h4><a href="/projectFull/">green thumb</a></h4>
+
+                <h1>
+                    Find your <br>
+                    next green <br>
+                    friend
+                </h1>
+
+                <div class="arrow" onclick="scrollBottom()"></div>
+            </div><!-- title -->
+        </div><!-- container -->
+
+    </header>
+
+    <main>
+        <section class="content_search">
+            <div class="container_small">
+                <div class="display">
+
+                    <div class="__item --sun">
+                        <p>
+                            <span>1.</span>
+                            Set the amount of <span>sundlinght</span>
+                            your plant will get.
+                        </p>
+
+                        <div class="inputs">
+                            <select id="select-sundlinght">
+                                <option selected disabled value="">Select...</option>
+                                <option value="high">High</option>
+                                <option value="low">Low</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><!-- __item --sun -->
+
+                    <div class="__item --water">
+                        <p>
+                            <span>2.</span>
+                            How often do you want to
+                            <span>water</span> your plant?
+                        </p>
+
+                        <div class="inputs">
+                            <select id="select-water">
+                                <option selected disabled value="">Select...</option>
+                                <option value="ever">Ever</option>
+                                <option value="regulary">Regulary</option>
+                                <option value="rarely">Rarely</option>
+                            </select>
+                        </div>
+                    </div><!-- __item --water -->
+
+                    <div class="__item --chew">
+                        <p>
+                            <span>3.</span>
+                            Do you have pets? Do
+                            they <span>chew</span> plants?
+                        </p>
+
+                        <div class="inputs">
+                            <select id="select-chew">
+                                <option selected disabled value="">Select...</option>
+                                <option value="1">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                    </div><!-- __item --chew -->
+
+                </div><!-- display -->
+            </div><!-- container -->
+        </section><!-- content_search -->
+
+        <section class="not_found --hidden">
+            <div class="container_small">
+                <div class="txt">
+                    <h2>No results yet...</h2>
+
+                    <p>
+                        Use the filters above to Find
+                        the plant that best fits your
+                        environment :)
+                    </p>
+                </div><!-- txt -->
+            </div><!-- container -->
+        </section><!-- not_found -->
+
+        <section class="content_result">
+            <div class="container_small">
+                <div class="title">
+                    <h2>Our picks for you</h2>
+                </div><!-- header -->
+
+                <div class="display">
+                    <div class="__item --favorite">
+
+                        <div class="image"><img
+                                src="https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png"
+                                alt=""></div>
+
+                        <h3>Bunny ears cacti</h3>
+
+                        <div class="informations">
+                            <div class="price">
+                                <span>$25</span>
+                            </div>
+                            <div class="details">
+                                <span class="toxicity --no"></span>
+                                <span class="sun --high"></span>
+                                <span class="water --rarely"></span>
+                            </div>
+                        </div>
+                    </div><!-- __item -->
+
+                    <div class="__item">
+                        <div class="image"><img
+                                src="https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png"
+                                alt=""></div>
+
+                        <h3>Bunny ears cacti</h3>
+
+                        <div class="informations">
+                            <div class="price">
+                                <span>$25</span>
+                            </div>
+                            <div class="details">
+                                <span class="toxicity --yes"></span>
+                                <span class="sun --low"></span>
+                                <span class="water --regulary"></span>
+                            </div>
+                        </div><!-- information -->
+                    </div><!-- __item -->
+
+                    <div class="__item">
+
+                        <div class="image"><img
+                                src="https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png"
+                                alt=""></div>
+
+                        <h3>Bunny ears cacti</h3>
+
+                        <div class="informations">
+                            <div class="price">
+                                <span>$25</span>
+                            </div>
+                            <div class="details">
+                                <span class="toxicity --yes"></span>
+                                <span class="sun --no"></span>
+                                <span class="water --ever"></span>
+                            </div>
+                        </div><!-- information -->
+                    </div><!-- __item -->
+
+                    <div class="__item">
+
+                    </div><!-- __item -->
+                    <div class="__item">
+
+                    </div><!-- __item -->
+                    <div class="__item">
+
+                    </div><!-- __item -->
+                    <div class="__item">
+
+                    </div><!-- __item -->
+
+
+                </div><!-- display -->
+
+                <div class="buttons">
+                    <button>back to the top</button>
+                </div>
+            </div><!-- container_small -->
+        </section><!-- content_result -->
+
+
+
+
+
+
+
+
+        <!-- SAVE -->
+        <section style="margin-top: 1000px;" class="save">
+
+        </section>
+        <!-- SAVE -->
+    </main>
+
+
+    <script>
+
+        // Function scroll bottom
+        const scrollBottom = () => {
+            alert('Descer a pagina até o bottom')
+        }
+    </script>
 
 </body>
 

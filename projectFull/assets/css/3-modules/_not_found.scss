@@ -1,0 +1,45 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  NOT FOUND
+  ================================
+*/
+
+.not_found {
+    
+    &.--hidden {
+        display: none;
+    }
+
+    & .container_small {
+        height: 350px;
+        display: flex;
+        align-items: center;
+        background: url('../images/icons/clip.png') no-repeat right 60px center;
+        animation: not-found 4s;
+
+        & .txt {
+
+            & h2,
+            & p {
+                color: main.$ColorThree;
+                transition: all 0.5s;
+                
+                &:hover {
+                    color: main.$ColorMain;
+                }
+            }
+
+            & p {
+                max-width: 270px;
+                font-size: reset.toRem(18);
+            }
+        }
+    }
+
+    @keyframes not-found {
+        
+    }
+}
