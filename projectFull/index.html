@@ -29,7 +29,7 @@
                     friend
                 </h1>
 
-                <div class="arrow" onclick="scrollBottom()"></div>
+                <div class="arrow" onclick="nextBottom()"></div>
             </div><!-- title -->
         </div><!-- container -->
 
@@ -48,7 +48,7 @@
                         </p>
 
                         <div class="inputs">
-                            <select id="select-sundlinght">
+                            <select id="select-sundlinght" onchange="validationSelecteds()">
                                 <option selected disabled value="">Select...</option>
                                 <option value="high">High</option>
                                 <option value="low">Low</option>
@@ -65,10 +65,10 @@
                         </p>
 
                         <div class="inputs">
-                            <select id="select-water">
+                            <select id="select-water" onchange="validationSelecteds()">
                                 <option selected disabled value="">Select...</option>
-                                <option value="ever">Ever</option>
-                                <option value="regulary">Regulary</option>
+                                <option value="daily">Daily</option>
+                                <option value="regularly">Regularly</option>
                                 <option value="rarely">Rarely</option>
                             </select>
                         </div>
@@ -82,10 +82,10 @@
                         </p>
 
                         <div class="inputs">
-                            <select id="select-chew">
+                            <select id="select-chew" onchange="validationSelecteds()">
                                 <option selected disabled value="">Select...</option>
-                                <option value="1">Yes</option>
-                                <option value="1">No</option>
+                                <option value="true">True</option>
+                                <option value="false">False</option>
                             </select>
                         </div>
                     </div><!-- __item --chew -->
@@ -94,7 +94,7 @@
             </div><!-- container -->
         </section><!-- content_search -->
 
-        <section class="not_found --hidden">
+        <section id="not_found">
             <div class="container_small">
                 <div class="txt">
                     <h2>No results yet...</h2>
@@ -108,116 +108,29 @@
             </div><!-- container -->
         </section><!-- not_found -->
 
-        <section class="content_result">
+        <section id="content_result" class="--hidden">
             <div class="container_small">
                 <div class="title">
                     <h2>Our picks for you</h2>
-                </div><!-- header -->
+                </div><!-- title -->
 
-                <div class="display">
-                    <div class="__item --favorite">
-
-                        <div class="image"><img
-                                src="https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png"
-                                alt=""></div>
-
-                        <h3>Bunny ears cacti</h3>
-
-                        <div class="informations">
-                            <div class="price">
-                                <span>$25</span>
-                            </div>
-                            <div class="details">
-                                <span class="toxicity --no"></span>
-                                <span class="sun --high"></span>
-                                <span class="water --rarely"></span>
-                            </div>
-                        </div>
-                    </div><!-- __item -->
-
-                    <div class="__item">
-                        <div class="image"><img
-                                src="https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png"
-                                alt=""></div>
-
-                        <h3>Bunny ears cacti</h3>
-
-                        <div class="informations">
-                            <div class="price">
-                                <span>$25</span>
-                            </div>
-                            <div class="details">
-                                <span class="toxicity --yes"></span>
-                                <span class="sun --low"></span>
-                                <span class="water --regulary"></span>
-                            </div>
-                        </div><!-- information -->
-                    </div><!-- __item -->
-
-                    <div class="__item">
-
-                        <div class="image"><img
-                                src="https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png"
-                                alt=""></div>
-
-                        <h3>Bunny ears cacti</h3>
-
-                        <div class="informations">
-                            <div class="price">
-                                <span>$25</span>
-                            </div>
-                            <div class="details">
-                                <span class="toxicity --yes"></span>
-                                <span class="sun --no"></span>
-                                <span class="water --ever"></span>
-                            </div>
-                        </div><!-- information -->
-                    </div><!-- __item -->
-
-                    <div class="__item">
-
-                    </div><!-- __item -->
-                    <div class="__item">
-
-                    </div><!-- __item -->
-                    <div class="__item">
-
-                    </div><!-- __item -->
-                    <div class="__item">
-
-                    </div><!-- __item -->
-
-
+                <div class="display" id="list_favorites">
                 </div><!-- display -->
 
                 <div class="buttons">
-                    <button>back to the top</button>
+                    <button onclick="backTop()">back to the top</button>
                 </div>
             </div><!-- container_small -->
         </section><!-- content_result -->
 
-
-
-
-
-
-
-
-        <!-- SAVE -->
+        <!-- SAVE CODIGOS -->
         <section style="margin-top: 1000px;" class="save">
 
         </section>
         <!-- SAVE -->
     </main>
 
-
-    <script>
-
-        // Function scroll bottom
-        const scrollBottom = () => {
-            alert('Descer a pagina até o bottom')
-        }
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 

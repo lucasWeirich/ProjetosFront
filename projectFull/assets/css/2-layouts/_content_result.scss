@@ -7,7 +7,12 @@
   ================================
 */
 
-.content_result {
+#content_result {
+
+    &.--hidden {
+        display: none;
+    }
+
     & .container_small {
         & .title {
             background: url('../images/icons/pick.png') no-repeat left 40px;
@@ -23,9 +28,9 @@
         }
 
         & .display {
-            @include main.FlexCenCen;
-            flex-wrap: wrap;
-            gap: 25px 30px;
+            display: grid;
+            grid-template-columns: 437px 206px 206px;
+            grid-gap: 25px;
 
             & .__item {
                 width: 205px;
@@ -33,6 +38,11 @@
                 background-color: #fff;
                 border-radius: 10px;
                 position: relative;
+                transition: all 0.5s;
+
+                &:hover {
+                    filter: brightness(0.95);
+                }
 
                 & .image {
                     width: 100%;
@@ -45,7 +55,7 @@
                 }
 
                 & h3 {
-                    line-height: 30px;
+                    line-height: 15px;
 
                     font: {
                         size: reset.toRem(20);
@@ -93,11 +103,11 @@
                         }
 
                         & .toxicity {
-                            &.--yes {
+                            &.--true {
                                 background: url('../images/icons/toxicity_yes.png') no-repeat center center;
                             }
 
-                            &.--no {
+                            &.--false {
                                 background: url('../images/icons/toxicity_no.png') no-repeat center center;
                             }
                         }
@@ -117,11 +127,11 @@
                         }
 
                         & .water {
-                            &.--ever {
+                            &.--daily {
                                 background: url('../images/icons/water_one.png') no-repeat center center;
                             }
 
-                            &.--regulary {
+                            &.--regularly {
                                 background: url('../images/icons/water_two.png') no-repeat center center;
                             }
 
@@ -136,6 +146,7 @@
                 &.--favorite {
                     width: 440px;
                     height: 510px;
+                    grid-row: 1/3;
 
                     &::after {
                         content: "Staff favorite";
@@ -177,14 +188,13 @@
                     & .informations {
                         width: 180px;
                         position: absolute;
+                        flex-direction: column;
+                        align-items: flex-end;
                         right: 0;
                         bottom: 60px;
 
                         & .price {
                             & span {
-                                display: flex;
-                                justify-content: end;
-
                                 font: {
                                     size: reset.toRem(30);
                                 }
