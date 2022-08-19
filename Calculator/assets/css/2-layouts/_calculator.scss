@@ -1,0 +1,78 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  CALCULATOR
+  ================================
+*/
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    height: 70vh;
+    margin: 15% auto;
+    border-radius: 15px;
+    background-color: main.$ColorZero;
+
+    & header {
+        height: 60px;
+        @include main.FlexBetCen;
+
+        padding: {
+            left: 30px;
+            right: 30px;
+        }
+
+        & .theme {
+            width: 30px;
+            cursor: pointer;
+        }
+    }
+
+    & .display {
+        height: 150px;
+        background-color: main.$ColorMain;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: flex-end;
+
+        padding: {
+            left: 10px;
+            right: 10px;
+        }
+
+        & .operation {
+            font: {
+                size: reset.toRem(30);
+                weight: 600;
+            }
+        }
+
+        & .result {
+            margin: {
+                top: 20px;
+                bottom: 10px;
+            }
+
+            font: {
+                size: reset.toRem(25)
+            }
+        }
+    }
+
+    & .inputs_calculator {
+        & #buttons_calc {
+            @include main.FlexBetCen;
+            flex-wrap: wrap;
+            gap: 10px 0;
+
+            padding: {
+                top: 25px;
+                left: 30px;
+                right: 30px;
+            }
+        }
+    }
+}

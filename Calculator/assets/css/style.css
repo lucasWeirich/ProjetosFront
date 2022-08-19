@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+/*RESET*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background-size: 100%;
+  line-height: 1.3;
+  cursor: default;
+}
+
+a {
+  transition: 0.3s all;
+  text-decoration: none;
+  color: #3da6c8;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+b, strong {
+  font-weight: 600;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Img
+  ========================================
+*/
+img,
+picture,
+video,
+embed,
+object {
+  max-width: 100%;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**/
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #b3ccf3;
+  color: #6e6e6e;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+/* DESKTOP LARGE - 1400px*/
+/* DESKTOP - 1200px*/
+/* LAPTOP - 1024px*/
+/* TABLET BIG - 900px*/
+/* TABLET - 600px*/
+/* MOBILE - 400px*/
+/* 
+  ================================
+  CALCULATOR
+  ================================
+*/
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  height: 70vh;
+  margin: 15% auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.calculator header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.calculator header .theme {
+  width: 30px;
+  cursor: pointer;
+}
+.calculator .display {
+  height: 150px;
+  background-color: #ececec;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.calculator .display .operation {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+.calculator .display .result {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5625rem;
+}
+.calculator .inputs_calculator #buttons_calc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* 
+  ================================
+  BUTTONS
+  ================================
+*/
+.buttonCalc .input[type=submit], .buttonCalc button, .buttonCalc a {
+  display: flex;
+  border: none;
+  border-radius: 20px;
+  background: #4f79dd;
+  color: #fcfcfc;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.125rem;
+}
+.buttonCalc .input[type=submit]:hover, .buttonCalc button:hover, .buttonCalc a:hover {
+  background: #b9d7e2;
+  color: #6e6e6e;
+}
+
+#buttons_calc button {
+  height: 70px;
+  width: 70px;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  color: #6e6e6e;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#buttons_calc button:nth-child(1), #buttons_calc button:nth-child(2), #buttons_calc button:nth-child(3), #buttons_calc button:nth-child(4) {
+  background: #d2d2d2;
+  color: #fcfcfc;
+}
+#buttons_calc button:nth-child(8), #buttons_calc button:nth-child(12), #buttons_calc button:nth-child(16), #buttons_calc button:nth-child(20) {
+  background: #b9d7e2;
+  color: #fcfcfc;
+}
+#buttons_calc button:nth-child(19) {
+  background: #4f79dd;
+  color: #fcfcfc;
+}
+#buttons_calc button:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,112 @@
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+// CONTAINER VARIABLE
+$SmallContainer: reset.toRem(1120); // Adicionar 40px no valor do container para uso de padding no responsivo 
+$Container: reset.toRem(1380); // Adicionar 40px no valor do container para uso de padding no responsivo 
+$LargeContainer: reset.toRem(1660); // Adicionar 40px no valor do container para uso de padding no responsivo 
+
+
+// VARIABLES COLORS
+$ColorMain: #ececec; // Display
+$ColorZero: #ffffff; // Background
+$ColorOne: #4f79dd; // Buttons Main
+$ColorTwo: #b9d7e2; // Buttons operations basic
+$ColorThree: #d2d2d2; // Buttons functions
+$ColorFour: #6e6e6e; // Fonts Numbers
+$ColorFive: #fcfcfc; // Fonts Options | Operations | Text
+
+// DarkMode
+body {
+   $ColorMain: #222222; // Display
+   $ColorZero: #1d1d1d; // Background
+   $ColorOne: #0048f2; // Buttons Main
+   $ColorTwo: #4566b6; // Buttons operations basic
+   $ColorThree: #323232; // Buttons functions
+}
+
+// DISPLAY FLEX
+@mixin FlexBetCen {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+@mixin FlexAroCen {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+@mixin FlexCenCen {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/**/
+body {
+   height: 100vh;
+   font-family: 'Poppins', sans-serif;
+   background: #b3ccf3;
+   color: $ColorFour;
+   font-weight: 400;
+   letter-spacing: 0px;
+}
+
+// BREAKPOINTS
+
+@mixin breakpoint($point) {
+   @if $point ==smashDesktopLarge {
+      @media screen and (max-width: 87.5rem) {
+         @content ;
+      }
+
+      // 1400px
+   }
+
+   @else if $point ==smashDesktop {
+      @media (max-width: 75rem) {
+         @content ;
+      }
+
+      //1200px
+   }
+
+   @else if $point ==smashLaptop {
+      @media (max-width: 64rem) {
+         @content ;
+      }
+
+      //1024px
+   }
+
+   @else if $point ==smashTabletBig {
+      @media (max-width: 56.25rem) {
+         @content ;
+      }
+
+      //900px
+   }
+
+   @else if $point ==smashTablet {
+      @media (max-width: 37.5rem) {
+         @content ;
+      }
+
+      //600px
+   }
+
+   @else if $point ==smashMobile {
+      @media (max-width: 25rem) {
+         @content ;
+      }
+
+      //400px
+   }
+
+   @else if $point ==smashContainer {
+      @media (max-width: $largureContainer) {
+         @content ;
+      }
+   }
+}
