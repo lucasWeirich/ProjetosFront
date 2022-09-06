@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Times</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>TIMES</h1>
+    </header>
+
+
+    <main>
+        <section class="cronometro">
+            <div class="container">
+
+                <div class="title">
+                    <h1>Cronometro</h1>
+                </div><!-- title -->
+
+                <div class="getValues">
+                    <button id="start" class="button --start ativo" onclick="start()">Start</button>
+                    <button id="redefinir" class="button --redefinir" onclick="redefinir()">Redefinir</button>
+                </div><!-- getValues -->
+
+                <div id="result" class="result">00:00</div>
+
+                <div class="functions">
+                    <button id="save" class="button --save" onclick="save()">Save</button>
+                    <button id="stop" class="button --stop" onclick="stop()">Stop</button>
+                </div><!-- functions -->
+
+                <div id="history" class="history">
+                </div><!-- history -->
+
+            </div><!-- container -->
+        </section><!-- cronometro -->
+
+        <section class="relogio">
+            <div class="container">
+
+                <div class="title">
+                    <h1>Relógio</h1>
+                </div><!-- title -->
+
+                <div class="image">
+                    <img src="images/relogio.jpg" alt="Relógio">
+                    <div class="ponteiros">
+                        <div id="hora" class="hora"></div>
+                        <div id="minuto" class="minuto"></div>
+                        <div id="segundo" class="segundo"></div>
+                    </div><!-- ponteiros -->
+                </div><!-- image -->
+
+            </div><!-- container -->
+        </section><!-- relogio -->
+    </main>
+
+
+    <script src="js/cronometro.js"></script>
+    <script src="js/relogio.js"></script>
+</body>
+
+</html>
