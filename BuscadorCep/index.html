@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Buscador de cep</title>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="card">
+            <div class="__title">
+                <h1>Busque sua cidade pelo seu CEP!</h1>
+            </div>
+
+            <div class="__input">
+                <input id="cep" type="number" placeholder="Informe o CEP que procura..." onchange="getCep()">
+            </div><!-- __input -->
+
+            <div class="__response">
+                <div class="__item" id="data-cep"></div>
+            </div><!-- __response -->
+        </div><!-- card -->
+    </div><!-- content -->
+
+    <div id="load">
+        <div class="icon">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><!-- load -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
