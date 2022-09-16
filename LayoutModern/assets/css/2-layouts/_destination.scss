@@ -1,0 +1,407 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  DESTINATION
+  ================================
+*/
+
+.destination {
+    background: url("../img/destination/background-destination-desktop.jpg") no-repeat;
+    background-size: cover;
+
+    & .content {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        & .__item {
+            width: 48%;
+            height: 75vh;
+
+            &.--img {
+                & h1 {
+                    letter-spacing: 4px;
+
+                    font: {
+                        size: reset.toRem(30);
+                        weight: 300;
+                    }
+
+                    & span {
+                        color: #444;
+                        margin-right: 15px;
+
+                        font: {
+                            weight: 500;
+                        }
+                    }
+                }
+
+                & .img {
+                    height: 75%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                    animation: rotateMaps 350s infinite;
+
+                    & img {
+                        transition: all 1s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    @keyframes rotateMaps {
+                        from {
+                            transform: rotate(0deg);
+                        }
+
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+
+            &.--txt {
+                padding-top: 100px;
+
+                & .__menu_maps {
+                    & ul {
+                        display: flex;
+                        gap: 10px;
+
+                        & a {
+                            color: main.$ColorZero;
+                            text-transform: uppercase;
+                            padding: 5px 8px;
+                            border-bottom: solid 2px transparent;
+                            cursor: pointer;
+
+                            font: {
+                                size: reset.toRem(16);
+                            }
+
+                            &:hover {
+                                border-bottom: solid 2px #fff;
+                            }
+                        }
+                    }
+                }
+
+                & .__title {
+                    & h1 {
+                        text-transform: uppercase;
+                        margin-top: 40px;
+
+                        font: {
+                            size: reset.toRem(100);
+                            weight: 300;
+                            family: serif;
+                        }
+                    }
+                }
+
+                & .__information {
+                    & p {
+                        margin-bottom: 50px;
+
+                        font: {
+                            size: reset.toRem(16);
+                        }
+                    }
+
+                    & .__datas_maps {
+                        border-top: 1px solid rgba(255, 255, 255, 0.348);
+                        padding-top: 30px;
+
+                        & ul {
+                            display: flex;
+                            justify-content: space-around;
+
+                            & li {
+                                & h2 {
+                                    text-transform: uppercase;
+                                    text-align: center;
+                                    margin-bottom: 5px;
+
+                                    font: {
+                                        size: reset.toRem(16);
+                                        weight: 300;
+                                    }
+                                }
+
+                                & h3 {
+                                    text-transform: uppercase;
+                                    text-align: center;
+
+                                    font: {
+                                        size: reset.toRem(25);
+                                        weight: 300;
+                                        family: serif;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP LARGE - 1400px
+@include main.breakpoint(smashDesktopLarge) {
+    .destination {
+        & .content {
+            justify-content: space-around;
+
+            & .__item {
+                width: 40%;
+
+                &.--img {
+                    & h1 {
+                        font: {
+                            size: reset.toRem(20);
+                        }
+                    }
+                }
+
+                &.--txt {
+                    & .__menu_maps {
+                        & ul {
+                            & a {
+                                font: {
+                                    size: reset.toRem(15);
+                                }
+                            }
+                        }
+                    }
+
+                    & .__title {
+                        & h1 {
+                            font: {
+                                size: reset.toRem(90);
+                            }
+                        }
+                    }
+
+                    & .__information {
+                        & p {
+                            font: {
+                                size: reset.toRem(15);
+                            }
+                        }
+
+                        & .__datas_maps {
+                            & ul {
+                                & li {
+                                    & h2 {
+                                        font: {
+                                            size: reset.toRem(15);
+                                        }
+                                    }
+
+                                    & h3 {
+                                        font: {
+                                            size: reset.toRem(20);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP - 1200px
+@include main.breakpoint(smashDesktop) {
+    .destination {
+        & .content {
+            & .__item {
+                &.--img {
+                    & h1 {
+                        font: {
+                            size: reset.toRem(18);
+                        }
+                    }
+                }
+
+                &.--txt {
+                    & .__menu_maps {
+                        & ul {
+                            & a {
+                                font: {
+                                    size: reset.toRem(14);
+                                }
+                            }
+                        }
+                    }
+
+                    & .__title {
+                        & h1 {
+                            font: {
+                                size: reset.toRem(80);
+                            }
+                        }
+                    }
+
+                    & .__information {
+                        & p {
+                            font: {
+                                size: reset.toRem(14);
+                            }
+                        }
+
+                        & .__datas_maps {
+                            & ul {
+                                & li {
+                                    & h2 {
+                                        font: {
+                                            size: reset.toRem(14);
+                                        }
+                                    }
+
+                                    & h3 {
+                                        font: {
+                                            size: reset.toRem(18);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LAPTOP - 1024px
+@include main.breakpoint(smashLaptop) {
+    .destination {
+        background: url('../img/destination/background-destination-tablet.jpg');
+        background-size: cover;
+
+        & .content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+
+            & .__item {
+                width: 85%;
+                height: 50vh;
+
+                &.--img {
+                    & h1 {
+                        padding-top: 200px;
+                        margin-bottom: 30px;
+
+                        font: {
+                            size: reset.toRem(16);
+                        }
+                    }
+
+                    & .img {
+                        width: 40%;
+                        height: 40%;
+                        margin: auto;
+                    }
+                }
+
+                &.--txt {
+                    padding-top: 30px;
+
+                    //& .__menu_maps {}
+
+                    & .__title {
+                        & h1 {
+                            margin: 0;
+
+                            font: {
+                                size: reset.toRem(60);
+                            }
+                        }
+                    }
+
+                    & .__information {
+                        & .__datas_maps {
+                            & ul {
+                                & li {
+                                    & h3 {
+                                        font: {
+                                            size: reset.toRem(16);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// TABLET - 600px 
+@include main.breakpoint(smashTablet) {
+    .destination {
+        background: url('../img/destination/background-destination-mobile.jpg');
+        background-size: cover;
+
+        & .content {
+            & .__item {
+                width: 100%;
+                &.--img {
+                    & h1 {
+                        font: {
+                            size: reset.toRem(14);
+                        }
+
+                        & span {
+                            margin-right: 0;
+                        }
+                    }
+
+                    & .img {
+                        width: 60%;
+                        margin-top: 30px;
+                    }
+                }
+
+                &.--txt {
+                    & .__title {
+                        & h1 {
+                            font: {
+                                size: reset.toRem(50);
+                            }
+                        }
+                    }
+
+                    & .__information {
+                        & .__datas_maps {
+                            & ul {
+                                & li {
+                                    & h3 {
+                                        font: {
+                                            size: reset.toRem(15);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

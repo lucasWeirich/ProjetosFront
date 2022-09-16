@@ -1,0 +1,308 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  TECHNOLOGY
+  ================================
+*/
+
+.technology {
+    background: url("../img/technology/background-technology-desktop.jpg") no-repeat;
+    background-size: cover;
+
+    & .content {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        & .__item {
+            width: 100%;
+            height: 75vh;
+
+            & h1 {
+                letter-spacing: 4px;
+
+                font: {
+                    size: reset.toRem(30);
+                    weight: 300;
+                }
+
+                & span {
+                    color: #444;
+                    margin-right: 15px;
+
+                    font: {
+                        weight: 500;
+                    }
+                }
+            }
+
+            & .mySwiper2 {
+                width: 110%;
+
+                & .swiper-slide {
+                    position: relative;
+
+                    & .__info_tech {
+                        margin: {
+                            top: 100px;
+                            left: 200px;
+                        }
+
+                        & h1 {
+                            color: #444;
+
+                            font: {
+                                size: reset.toRem(40);
+                                weight: 300;
+                                family: serif;
+                            }
+                        }
+
+                        & h2 {
+                            margin-bottom: 40px;
+                            letter-spacing: 4px;
+
+                            font: {
+                                size: reset.toRem(70);
+                                weight: 300;
+                                family: serif;
+                            }
+                        }
+
+                        & p {
+                            max-width: 600px;
+                            letter-spacing: 1px;
+
+                            font: {
+                                size: reset.toRem(16);
+                                weight: 300;
+                            }
+                        }
+                    }
+
+                    & img {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                    }
+                }
+
+                & .swiper-pagination {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                    position: absolute;
+                    top: 35%;
+                    left: 30px;
+
+                    &-bullet {
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #444;
+
+                        &-active {
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP LARGE - 1400px 
+@include main.breakpoint(smashDesktopLarge) {
+    .technology {
+        & .content {
+            & .__item {
+                & h1 {
+                    font: {
+                        size: reset.toRem(25);
+                    }
+                }
+
+                & .mySwiper2 {
+                    & .swiper-slide {
+                        & .__info_tech {
+                            & h1 {
+                                font: {
+                                    size: reset.toRem(30);
+                                }
+                            }
+
+                            & h2 {
+                                font: {
+                                    size: reset.toRem(65);
+                                }
+                            }
+
+                            & p {
+                                max-width: 500px;
+
+                                font: {
+                                    size: reset.toRem(15);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP - 1200px 
+@include main.breakpoint(smashDesktop) {
+    .technology {
+        & .content {
+            & .__item {
+
+                & h1 {
+                    font: {
+                        size: reset.toRem(20);
+                    }
+                }
+
+                & .mySwiper2 {
+                    & .swiper-slide {
+                        & .__info_tech {
+                            margin: {
+                                top: 100px;
+                                left: 200px;
+                            }
+
+                            & h1 {
+                                font: {
+                                    size: reset.toRem(25);
+                                }
+                            }
+
+                            & h2 {
+                                margin-bottom: 40px;
+
+                                font: {
+                                    size: reset.toRem(50);
+                                }
+                            }
+
+                            & p {
+                                font: {
+                                    size: reset.toRem(14);
+                                }
+                            }
+                        }
+
+                        & img {
+                            width: 350px;
+                        }
+                    }
+
+                    & .swiper-pagination {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+                        position: absolute;
+                        top: 35%;
+                        left: 30px;
+
+                        &-bullet {
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #444;
+
+                            &-active {
+                                background-color: #fff;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LAPTOP - 1024px 
+@include main.breakpoint(smashLaptop) {
+    .technology {
+        background: url("../img/technology/background-technology-tablet.jpg") no-repeat bottom;
+        background-size: cover;
+
+        & .content {
+            & .__item {
+                height: 85vh;
+
+                & h1 {
+                    font: {
+                        size: reset.toRem(16);
+                    }
+
+                    & span {
+                        margin-right: 0px;
+                    }
+                }
+
+                & .mySwiper2 {
+                    width: 100%;
+
+                    & .swiper-slide {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        & .__info_tech {
+                            margin: {
+                                top: 0px;
+                                left: 0px;
+                            }
+
+                            & h1 {
+                                font: {
+                                    size: reset.toRem(20);
+                                }
+                            }
+
+                            & h2 {
+                                margin-bottom: 20px;
+
+                                font: {
+                                    size: reset.toRem(40);
+                                }
+                            }
+                        }
+
+                        & img {
+                            position: relative;
+                        }
+                    }
+
+                    & .swiper-pagination {
+                        flex-direction: row;
+                        justify-content: center;
+                        position: relative;
+                        margin: {
+                            left: -50px;
+                            top: 50px;
+                        }
+
+                        &-bullet {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

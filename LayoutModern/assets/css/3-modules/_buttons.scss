@@ -1,0 +1,90 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  BUTTONS
+  ================================
+*/
+
+.buttons {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.5s;
+  position: relative;
+
+  font: {
+    size: reset.toRem(25);
+    family: serif;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:hover {
+    background: main.$ColorMain;
+    color: #fff;
+
+    &::after {
+      animation: button-effect 2s infinite;
+    }
+  }
+
+  @keyframes button-effect {
+    from {
+      transform: scale(1);
+      background: rgba(0, 0, 0, 0.385);
+    }
+
+    to {
+      transform: scale(1.3);
+    }
+  }
+}
+
+// DESKTOP LARGE - 1400px
+@include main.breakpoint(smashDesktopLarge) {
+  .buttons {
+    width: 180px;
+    height: 180px;
+
+    font: {
+      size: reset.toRem(20);
+    }
+  }
+}
+
+// DESKTOP - 1200px 
+@include main.breakpoint(smashDesktop) {
+  .buttons {
+    width: 160px;
+    height: 160px;
+
+    font: {
+      size: reset.toRem(18);
+    }
+  }
+}
+
+// LAPTOP - 1024px
+@include main.breakpoint(smashLaptop) {
+  .buttons {
+    width: 140px;
+    height: 140px;
+
+    font: {
+      size: reset.toRem(14);
+    }
+  }
+}

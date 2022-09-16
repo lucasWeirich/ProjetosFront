@@ -1,0 +1,153 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  HOME
+  ================================
+*/
+
+.home {
+  background: url("../img/home/background-home-desktop.jpg") no-repeat;
+  background-size: cover;
+
+  & .content {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+
+    & .__txt {
+      max-width: 480px;
+
+      & h1 {
+        margin-bottom: 30px;
+
+        font: {
+          size: reset.toRem(30);
+          weight: 400;
+        }
+
+        & span {
+          font: {
+            size: reset.toRem(140);
+            weight: 500;
+            family: serif;
+          }
+        }
+      }
+
+      & p {
+        font: {
+          size: reset.toRem(16);
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP LARGE - 1400px 
+@include main.breakpoint(smashDesktopLarge) {
+  .home {
+    & .content {
+      justify-content: space-around;
+
+
+      & .__txt {
+
+        & h1 {
+          font: {
+            size: reset.toRem(20);
+          }
+
+          & span {
+            font: {
+              size: reset.toRem(120);
+            }
+          }
+        }
+
+        & p {
+          font: {
+            size: reset.toRem(15);
+          }
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP - 1200px 
+@include main.breakpoint(smashDesktop) {
+  .home {
+    & .content {
+      & .__txt {
+        & h1 {
+          margin-bottom: 25px;
+
+          font: {
+            size: reset.toRem(16);
+          }
+
+          & span {
+            font: {
+              size: reset.toRem(100);
+            }
+          }
+        }
+
+        & p {
+          font: {
+            size: reset.toRem(14);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* LAPTOP - 1024px*/
+@include main.breakpoint(smashLaptop) {
+  .home {
+    background: url("../img/home/background-home-tablet.jpg") no-repeat bottom;
+    background-size: cover;
+
+    & .content {
+      height: 90vh;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+
+      & .__txt {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+// TABLET - 600px
+@include main.breakpoint(smashTablet) {
+  .home {
+    background: url("../img/home/background-home-mobile.jpg") no-repeat bottom;
+    background-size: cover;
+
+    & .content {
+      & .__txt {
+        & h1 {
+          margin-bottom: 20px;
+
+          font: {
+            size: reset.toRem(15);
+          }
+
+          & span {
+            font: {
+              size: reset.toRem(80);
+            }
+          }
+        }
+      }
+    }
+  }
+}

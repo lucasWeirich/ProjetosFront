@@ -1,0 +1,148 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  HEADER
+  ================================
+*/
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+
+    padding: {
+        top: 50px;
+        left: 30px;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 130%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.375), rgba(0, 0, 0, 0));
+        z-index: -1;
+    }
+
+    //& .__logo {}
+
+    & .__menu {
+        & nav {
+            & ul {
+                height: 80px;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                background-color: rgba(243, 239, 239, 0.129);
+                border-radius: 20px 0 0 20px;
+
+                padding: {
+                    right: 150px;
+                    left: 50px;
+                }
+
+                & a {
+                    color: main.$ColorZero;
+                    text-transform: uppercase;
+                    padding: 25px 40px;
+                    border-bottom: solid 3px transparent;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-bottom: solid 3px #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP LARGE - 1400px 
+@include main.breakpoint(smashDesktopLarge) {
+    header {
+        & .__menu {
+            & nav {
+                & ul {
+                    height: 60px;
+                    gap: 20px;
+
+                    padding: {
+                        right: 60px;
+                    }
+
+                    & a {
+                        padding: 15px 30px;
+                        font-size: reset.toRem(15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// LAPTOP - 1024px 
+@include main.breakpoint(smashLaptop) {
+    header {
+
+        & .__logo {
+            margin-top: -145px;
+        }
+
+        & .__menu {
+            & nav {
+                & ul {
+                    width: 145px;
+                    height: 150px;
+                    flex-direction: column;
+                    gap: 10px;
+                    background: rgb(0 0 0 / 43%);
+
+                    padding: {
+                        top: 25px;
+                        right: 0px;
+                        left: 10px;
+                    }
+
+                    & li {
+                        width: 100%;
+
+                        & a {
+                            display: inherit;
+                            text-align: end;
+                            font-size: reset.toRem(13);
+
+                            padding: {
+                                top: 0;
+                                bottom: 0;
+                                right: 10px;
+                                left: 10px;
+                            }
+
+                            border: {
+                                bottom: none;
+                                left: solid 2px transparent;
+                            }
+
+                            &:hover {
+                                text-align: center;
+
+                                border: {
+                                    bottom: none;
+                                    left: solid 2px #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
