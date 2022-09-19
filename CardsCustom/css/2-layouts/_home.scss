@@ -1,0 +1,15 @@
+@use '../1-base/reset.scss';
+@use '../1-base/main.scss';
+
+/* 
+  ================================
+  HOME
+  ================================
+*/
+
+main {
+    & .container_small {
+        @include main.FlexBetCen;
+        flex-wrap: wrap;
+    }
+}

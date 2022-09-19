@@ -1,0 +1,176 @@
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+// CONTAINER VARIABLE
+$SmallContainer: reset.toRem(955); // Adicionar 40px no valor do container para uso de padding no responsivo 
+$Container: reset.toRem(1380); // Adicionar 40px no valor do container para uso de padding no responsivo 
+$LargeContainer: reset.toRem(1660); // Adicionar 40px no valor do container para uso de padding no responsivo 
+
+
+// VARIABLES COLORS
+$ColorMain: #1E6B4E; //  Fonts main in cards
+$ColorZero: #15573F; //  Buttons e inputs
+$ColorOne: #797979; //   Text emphasis
+$ColorTwo: #848484; //   Text Default
+$ColorThree: #A9A9A9; // Text of loading
+$ColorFour: #F6F6F6; //  Background
+
+// DISPLAY FLEX
+@mixin FlexBetCen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin FlexAroCen {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin FlexCenCen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**/
+body {
+    background: #222;
+    font-family: 'Sen', sans-serif;
+    color: $ColorTwo;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+p {
+    font-family: 'Sen', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+    font-size: reset.toRem(14);
+}
+
+span {
+    color: $ColorOne;
+
+    font: {
+        weight: bold
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $ColorMain;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: reset.toRem(70);
+}
+
+h2 {
+    font-size: reset.toRem(55);
+}
+
+h3 {
+    font-size: reset.toRem(45);
+}
+
+h4 {
+    font-size: reset.toRem(35);
+}
+
+.espacamento {
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+    z-index: 11111;
+    border-radius: 20px;
+    margin-top: 300px;
+    margin-bottom: 100px;
+
+}
+
+// BREAKPOINTS
+@mixin breakpoint($point) {
+    @if $point ==smashDesktopLarge {
+        @media screen and (max-width: 87.5rem) {
+            @content ;
+        }
+
+        // 1400px
+    }
+
+    @else if $point ==smashDesktop {
+        @media (max-width: 75rem) {
+            @content ;
+        }
+
+        //1200px
+    }
+
+    @else if $point ==smashLaptop {
+        @media (max-width: 64rem) {
+            @content ;
+        }
+
+        //1024px
+    }
+
+    @else if $point ==smashTabletBig {
+        @media (max-width: 56.25rem) {
+            @content ;
+        }
+
+        //900px
+    }
+
+    @else if $point ==smashTablet {
+        @media (max-width: 37.5rem) {
+            @content ;
+        }
+
+        //600px
+    }
+
+    @else if $point ==smashMobile {
+        @media (max-width: 25rem) {
+            @content ;
+        }
+
+        //400px
+    }
+
+    @else if $point ==smashContainer {
+        @media (max-width: $largureContainer) {
+            @content ;
+        }
+    }
+}
+
+// CONTAINER
+.container_large,
+.container,
+.container_small {
+    margin: 0 auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.container_small {
+    max-width: $SmallContainer;
+}
+
+.container {
+    max-width: $Container;
+}
+
+.container_large {
+    max-width: $LargeContainer;
+}
