@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+/* DEFAULT */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+label {
+    color: #888;
+}
+
+body {
+    background-color: #111;
+}
+
+/* GENERATOR_PASSWORD */
+.generator_password {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.generator_password .display {
+    width: 500px;
+    min-height: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #222;
+    box-shadow: 0 0 10px rgb(44, 44, 44);
+}
+
+.generator_password .display h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.generator_password .display .__password {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #333;
+    color: #888;
+    font-size: 20px;
+    line-break: anywhere;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.generator_password .display .__password:hover {
+    color: #057b05;
+}
+
+.generator_password .display .__copy {
+    padding-left: 20px;
+    line-height: 15px;
+    font-size: 15px;
+}
+
+.generator_password .display .__options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.generator_password .display .__options input {
+    cursor: pointer;
+}
+
+.generator_password .display .__options label {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.generator_password .display .__button_generator {
+    margin: 50px 0;
+}
+
+.generator_password .display .__button_generator button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #111;
+    box-shadow: 0 0 10px #222;
+    color: #fff;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.generator_password .display .__button_generator button:hover {
+    background: #0f520f;
+    box-shadow: 0 0 5px #057b05;
+}

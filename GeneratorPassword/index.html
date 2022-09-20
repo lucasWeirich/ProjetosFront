@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generator Password</title>
+</head>
+
+<body>
+
+    <section class="generator_password">
+        <div class="display">
+            <h1>Generator Password</h1>
+
+            <div class="__password" onclick="copyPassword()">
+                <div id="password" class="__newPassword">Password...</div>
+                <div class="__copy">Copy</div>
+            </div><!-- __password -->
+
+            <div class="__options">
+                <label for="character_lenght">Character Lenght: <span id="lenght_password">--</span></label>
+                <input type="range" name="character_lenght" id="numLenght" min="10" max="50">
+
+                <div>
+                    <input type="checkbox" class="type_password" id="letters_uppercase" value="uppercase" checked>
+                    <label for="letters_uppercase">Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="type_password" id="letters_lowercase" value="lowercase">
+                    <label for="letters_lowercase">Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="type_password" id="numbers" value="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="type_password" id="symbols" value="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+            </div><!-- __options -->
+
+            <div class="__button_generator">
+                <button onclick="generatorPassword()">Generator</button>
+            </div><!-- __button_generator -->
+        </div><!-- display -->
+    </section><!-- generator_password -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
