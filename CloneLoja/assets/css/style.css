@@ -218,6 +218,7 @@ header #menu_mobile {
   background-color: #ef7a13;
   position: absolute;
   left: 0;
+  display: none;
 }
 header #menu_mobile.--hidden {
   top: 0;
@@ -284,6 +285,9 @@ header #menu_mobile nav li.--subMenu.--active ul {
 
 /* LAPTOP - 1024px*/
 @media (max-width: 64rem) {
+  header #menu_mobile {
+    display: flex;
+  }
   header .container .__menu {
     display: none;
   }

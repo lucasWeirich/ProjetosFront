@@ -114,6 +114,7 @@ header {
         background-color: main.$ColorZero;
         position: absolute;
         left: 0;
+        display: none;
 
         &.--hidden {
             top: 0;
@@ -203,6 +204,10 @@ header {
 /* LAPTOP - 1024px*/
 @include main.breakpoint(smashLaptop) {
     header {
+        & #menu_mobile {
+            display: flex;
+        }
+
         & .container {
 
             & .__menu {
