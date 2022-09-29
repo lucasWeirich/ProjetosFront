@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/js/owlCarousel/owl_carousel.css">
+    <link rel="stylesheet" href="assets/js/swiper/swiper.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mini Loja - Buscar Produto</title>
+</head>
+
+<body>
+
+    <header id="header"></header>
+    
+    <main class="search">
+    
+        <div class="subHeader" id="scrool-paginator">
+            <button class="buttons-paginator --last">last</button>
+            <ul id="category_products">
+                <!-- LIST CATEGORY -->
+            </ul>
+            <button class="buttons-paginator --next">next</button>
+        </div>
+
+        <section class="result_search">
+            <div class="container">
+                <div class="__title">
+                    <h2>Resultados da Pesquisa</h2>
+                </div>
+
+                <div id="loading_products"></div>
+
+                <div class="__products_found cart_product" id="products_search">
+                    <!-- PRODUCTS SEARCH -->
+                </div><!-- __products_found -->
+            </div><!-- container -->
+        </section><!-- result_search -->
+
+    </main>
+
+    <section id="load_main"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="assets/js/jquery/_jquery.js"></script>
+    <!-- <script src="assets/js/owlCarousel/_owl_carousel.js"></script> -->
+    <script src="assets/js/swiper/_swiper.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/busca.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+
+</html>

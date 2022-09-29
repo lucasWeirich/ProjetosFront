@@ -1,0 +1,135 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  FOOTER
+  ================================
+*/
+
+footer {
+    width: 100%;
+    border-top: solid 2px main.$ColorMain;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .__main {
+            @include main.FlexBetCen;
+            padding: 30px 0;
+
+            & .__logo {
+                width: 20%;
+            }
+
+            & .__item {
+                width: 60%;
+                @include main.FlexBetCen;
+                flex-direction: column;
+
+                & .__menu {
+                    width: 100%;
+                    @include main.FlexBetCen;
+
+                    & ul {
+                        @include main.FlexCenCen;
+                        gap: 30px;
+
+                        & li {
+                            & a {
+                                display: flex;
+                                justify-content: center;
+                                padding: 20px 30px;
+                                color: main.$ColorMain;
+                                position: relative;
+
+                                font: {
+                                    size: reset.toRem(20);
+                                    weight: 500
+                                }
+
+                                &::before,
+                                &::after {
+                                    content: "";
+                                    width: 0%;
+                                    height: 2px;
+                                    display: flex;
+                                    background-color: main.$ColorZero;
+                                    position: absolute;
+                                    bottom: 0;
+                                    transition: 0.5s;
+                                }
+
+                                &::before {
+                                    left: 0;
+                                }
+
+                                &::after {
+                                    right: 0;
+                                }
+
+                                &:hover {
+
+                                    &::before,
+                                    &::after {
+                                        content: "";
+                                        width: 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & .__info {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    & div {
+                        margin: 25px 0;
+                    }
+
+                    & a {
+                        color: main.$ColorMain;
+                        padding: 10px 40px;
+                        margin-bottom: 20px;
+
+                        &.--whats {
+                            background: url('../images/whats.png') no-repeat left;
+                        }
+
+                        &.--email {
+                            background: url('../images/email.png') no-repeat left;
+                        }
+
+                        &.--loja {
+                            background: url('../images/loja.png') no-repeat left;
+                        }
+
+                        &.--local {
+                            background: url('../images/local.png') no-repeat left;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .__footer {
+            padding-bottom: 15px;
+
+            & p {
+                text-align: center;
+                color: main.$ColorMain;
+                font-size: reset.toRem(12);
+
+                & span {
+                    color: main.$ColorZero;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

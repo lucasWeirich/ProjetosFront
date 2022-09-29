@@ -1,0 +1,23 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/* 
+  ================================
+  LOAD MAIN
+  ================================
+*/
+
+#load_main {
+    width: 100%;
+    height: 100vh;
+    background: #1543195e url('../images/load.gif') no-repeat center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+
+    &.--active {
+        display: initial;
+    }
+}

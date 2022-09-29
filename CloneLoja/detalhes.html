@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/js/owlCarousel/owl_carousel.css">
+    <link rel="stylesheet" href="assets/js/swiper/swiper.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mini Loja</title>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main class="detalhes">
+        <section class="product">
+            <div class="container" id="info_product">
+                <!-- INFO PRODUCT -->
+            </div><!-- container -->
+        </section><!-- product -->
+
+        <section class="similar_products">
+            <div class="container">
+                <h3>Produtos similares:</h3>
+                <div class="owl-carousel owl-theme owl_row_products cart_product" id="similar_products">
+                    <!-- SIMILAR PRODUCTS -->
+                </div><!-- owl-carousel -->
+            </div><!-- container -->
+        </section><!-- similar_products -->
+    </main><!-- detalhes -->
+
+    <section id="load_main"></section>
+
+    <footer id="footer"></footer>
+
+    <script src="assets/js/jquery/_jquery.js"></script>
+    <script src="assets/js/owlCarousel/_owl_carousel.js"></script>
+    <script src="assets/js/swiper/_swiper.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/detalhes.js"></script>
+
+    <script>
+        $('.owl_row_products').owlCarousel({
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                450: {
+                    items: 1.3
+                },
+                690: {
+                    items: 2
+                },
+                830: {
+                    items: 2.5
+                },
+                1000: {
+                    items: 3
+                },
+                1300: {
+                    items: 4
+                }
+            }
+        })
+    </script>
+</body>
+
+
+</html>
