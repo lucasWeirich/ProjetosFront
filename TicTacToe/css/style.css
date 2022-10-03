@@ -1,0 +1,225 @@
+:root {
+    --X: #d62525;
+    --O: #2531d6;
+    --Win: #25ced6;
+    overflow: hidden;
+}
+
+::selection {
+    display: none;
+}
+
+/* TITLE */
+
+.__title {
+    text-align: center;
+    padding: 30px;
+}
+
+.__title h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.__title .__placar {
+    letter-spacing: 5px;
+    font-size: 14px;
+}
+
+.__title .__placar .player {
+    font-size: 25px;
+}
+
+.__title .__placar .player.--x {
+    color: var(--X);
+}
+
+.__title .__placar .player.--o {
+    color: var(--O);
+}
+
+.__title .__playerPlay {
+    color: var(--Win);
+    margin: 30px 0;
+    font-size: 25px;
+}
+
+.__title .__playerPlay span {
+    font-weight: 600;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.__title .__playerPlay .--x {
+    color: var(--X);
+}
+
+.__title .__playerPlay .--o {
+    color: var(--O);
+}
+
+/* TABLE */
+
+.__table {
+    width: 610px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+.__table .__item {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 80px;
+    text-shadow: 2px 2px 0px #000;
+    background-color: #fff;
+    border: solid 2px #f3f3f3;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.__table .__item:hover {
+    background-color: #f2f2f2;
+}
+
+.__table .__item.--x {
+    background-color: var(--X);
+    opacity: 0.9;
+}
+
+.__table .__item.--o {
+    background-color: var(--O);
+}
+
+.__table .__item.--x:hover,
+.__table .__item.--o:hover {
+    cursor: no-drop;
+    opacity: 0.5;
+    color: #000;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+/* HISTORY */
+
+.__history {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    border-radius: 10px 0 0 10px;
+    background-color: #008080;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.__history:hover {
+    background-color: #319494;
+}
+
+.__history h3 {
+    color: #fff;
+}
+
+.__history .__info {
+    max-height: 80vh;
+    overflow-x: auto;
+    position: absolute;
+    top: 65px;
+    opacity: 0;
+    visibility: collapse;
+    transition: all 0.5s;
+    cursor: initial;
+}
+
+.__history .__info.--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.__history .__info p {
+    width: 250px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    border-radius: 10px 0 0 10px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.__history .__info p.--x {
+    color: var(--X);
+    transition: all 0.5s;
+}
+
+.__history .__info p.--x:hover {
+    background-color: var(--X);
+}
+
+.__history .__info p.--o {
+    color: var(--O);
+    transition: all 0.5s;
+}
+
+.__history .__info p.--o:hover {
+    background-color: var(--O);
+}
+
+.__history .__info p span.--x {
+    color: var(--X);
+}
+
+.__history .__info p span.--o {
+    color: var(--O);
+}
+
+.__history .__info p::before {
+    content: attr(data-winner)" venceu!";
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    right: 30%;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.__history .__info p:hover::before {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* RESET */
+
+.__reset {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    border-radius: 0 10px 10px 0;
+    background-color: #de9b00;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.__reset:hover {
+    background-color: #de4300;
+}
+
+.__reset h3 {
+    color: #fff;
+}
