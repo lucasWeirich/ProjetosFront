@@ -1,0 +1,604 @@
+/* ==========================
+=========== RESET ===========
+========================== */
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "Sen", sans-serif;
+    vertical-align: baseline;
+    text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+body {
+    background-size: 100%;
+    line-height: 1.3;
+    cursor: default;
+}
+
+a {
+    transition: 0.3s all;
+    text-decoration: none;
+    color: #3da6c8;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+b,
+strong {
+    font-weight: 600;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+/*
+  ========================================
+  Img
+  ========================================
+*/
+img,
+picture,
+video,
+embed,
+object {
+    max-width: 100%;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+}
+
+/*
+  ========================================
+  TODO
+  ========================================
+*/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+/* DETAILS TASK */
+.__details {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px #f2f2f2;
+    position: relative;
+}
+
+.__details>*::selection {
+    background-color: transparent;
+    color: #32a419;
+}
+
+.__details>* {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.__details .__id {
+    font-size: 10px;
+    color: #c2c2c2;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.__details .__title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.__details.--todo .__title {
+    color: #3da6c8;
+}
+
+.__details.--progress .__title {
+    color: #56c83d;
+}
+
+.__details.--done .__title {
+    color: #c83d3d;
+}
+
+
+.__details .__descriptions {
+    margin-bottom: 10px;
+}
+
+.__details .__times {
+    display: flex;
+    justify-content: space-between;
+}
+
+.__details .__timePublish,
+.__details .__timeFinal {
+    position: relative;
+    padding-bottom: 2px;
+    transition: all 0.5s;
+}
+
+.__details .__timePublish::after,
+.__details .__timeFinal::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.__details .__timePublish::after {
+    background: #3da6c8;
+}
+
+.__details .__timeFinal::after {
+    background: #c83d3d;
+}
+
+.__details .__timePublish:hover {
+    color: #3da6c8;
+}
+
+.__details .__timeFinal:hover {
+    color: #c83d3d;
+}
+
+.__details .__timePublish:hover::after,
+.__details .__timeFinal:hover::after {
+    width: 100%;
+}
+
+.__details .__status {
+    width: 40px;
+    height: 8px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.__details.--todo .__status {
+    background-color: #3da6c8;
+}
+
+.__details.--progress .__status {
+    background-color: #56c83d;
+}
+
+.__details.--done .__status {
+    background-color: #c83d3d;
+}
+
+/* ADD TASK */
+.add_task {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.add_task .__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.add_task .__inputs label {
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    transition: all 0.5s;
+}
+
+
+.add_task .__inputs input,
+.add_task .__inputs textarea {
+    padding: 10px;
+    border: solid 1px #000;
+    outline: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.add_task .__inputs textarea {
+    height: 100px;
+    resize: none;
+}
+
+.add_task .__inputs button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    background: #404040;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.add_task .__inputs button:hover {
+    background: #50ab3b;
+    color: #000;
+}
+
+.add_task .__inputs:hover>* {
+    color: #32a419;
+    border-color: #56c83d;
+}
+
+/* BOARD */
+.board {
+    width: 350px;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.board h3 {
+    color: #dd8b27;
+    text-align: center;
+}
+
+.board .dropzone {
+    margin-top: 30px;
+    min-height: 250px;
+    width: 100%;
+}
+
+.is-dragging {
+    cursor: move;
+    opacity: 0.3;
+}
+
+.board .dropzone.highlight {
+    background-color: #FD951F08;
+}
+
+.board .dropzone.over {
+    background-color: #4cd13711;
+}
+
+.board .dropzone,
+.board .dropzone .card {
+    transition: all 0.5s;
+}
+
+.board .dropzone .card {
+    width: 250px;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #222;
+    border-bottom: solid 1px #c59254;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    cursor: grab;
+}
+
+.board .dropzone .card:active {
+    cursor: grabbing;
+}
+
+.board .dropzone .card .content {
+    padding-right: 30px;
+}
+
+.board .dropzone .card .finalTime {
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.board .dropzone .card .finalTime.--baixo {
+    color: #3da6c8;
+}
+
+.board .dropzone .card .finalTime.--medio {
+    color: #32a419;
+}
+
+.board .dropzone .card .finalTime.--alto {
+    color: #c83d3d;
+}
+
+.board .dropzone .card .--edit {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: collapse;
+}
+
+.board .dropzone:hover .card .--edit {
+    opacity: 1;
+    visibility: visible;
+}
+
+.board .dropzone#todo .card .--edit:hover {
+    color: #3da6c8;
+}
+
+.board .dropzone#progress .card .--edit:hover {
+    color: #56c83d;
+}
+
+.board .dropzone#done .card .--edit:hover {
+    color: #c83d3d;
+}
+
+.board .dropzone .card .--delete {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    opacity: 0;
+    visibility: collapse;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.board .dropzone .card:hover .--delete {
+    opacity: 1;
+    visibility: visible;
+}
+
+.board .dropzone .card .--delete:hover {
+    color: #c90505;
+}
+
+.board .dropzone .card .status {
+    width: 35px;
+    height: 8px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.board .dropzone#todo .card .status {
+    background-color: #3da6c8;
+}
+
+.board .dropzone#progress .card .status {
+    background-color: #56c83d;
+}
+
+.board .dropzone#done .card .status {
+    background-color: #c83d3d;
+}
+
+
+/*
+  ===============================
+  POPUP
+  =============================== 
+*/
+
+.__popup {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.187);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.__popup.--active {
+    /* POPUP - ACTIVE */
+    display: flex;
+}
+
+.__popup .content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.__popup .content .close_popup {
+    border: none;
+    background-color: #fff;
+    color: #dd8b27;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 0 15px #c2c2c2;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: all 0.5s;
+}
+
+.__popup .content .close_popup:hover {
+    background-color: #c83d3d;
+    color: #fff;
+}
+
+.__popup .content .__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.__popup .content .__inputs label {
+    color: #dd8b27;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    transition: all 0.5s;
+}
+
+
+.__popup .content .__inputs input,
+.__popup .content .__inputs textarea {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #e1e1e1;
+    transition: all 0.5s;
+}
+
+.__popup .content .__inputs textarea {
+    height: 100px;
+    resize: none;
+}
+
+.__popup .content .__inputs button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    background: #404040;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.__popup .content .__inputs button:hover {
+    background: #50ab3b;
+    color: #000;
+}
+
+.__popup .content .__inputs:hover>* {
+    color: #32a419;
+    border-color: #56c83d;
+}
