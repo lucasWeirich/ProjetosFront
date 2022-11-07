@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,-25" />
+    <!-- ICONS -->
+
+    <title>Controller of Password</title>
+</head>
+
+<body>
+    <main class="home">
+        <div class="container">
+            <div class="__title">
+                <h1>Gerenciador de senhas</h1>
+            </div><!-- __title -->
+
+            <div class="__addNewSite">
+                <h3>Adicionar</h3>
+                <form id="add">
+                    <div class="inputs">
+                        <input type="text" name="name" placeholder="Informe o nome do site...">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="password" name="password" placeholder="Informe o a senha do site...">
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" value="Adicionar">
+                    </div>
+                </form>
+            </div><!-- __addNewSite -->
+
+            <div class="__busca">
+                <h3>Pesquisar</h3>
+                <form id="search">
+                    <div class="inputs">
+                        <input type="text" name="name" placeholder="Informe o nome do site...">
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" value="Pesquisar">
+                    </div>
+                </form>
+            </div><!-- __busca -->
+
+            <div class="__result">
+                <ul>
+                    <!-- <li>Site 01 <span onclick="copyPassword(this)">juyefwb</span></li> -->
+                </ul>
+            </div><!-- __result -->
+        </div><!-- container -->
+    </main><!-- home -->
+
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

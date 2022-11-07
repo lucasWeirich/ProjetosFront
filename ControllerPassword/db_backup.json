@@ -1,0 +1,124 @@
+{
+    "sites": [
+        {
+            "id": 1,
+            "name": "um",
+            "password": "aslksdiu",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 2,
+            "name": "dois",
+            "password": "aslksdiu",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 3,
+            "name": "tres",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 4,
+            "name": "quatro",
+            "password": "aslksdiu",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 5,
+            "name": "cinco",
+            "password": "aslksdiu",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 6,
+            "name": "seis",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 7,
+            "name": "ssete",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 8,
+            "name": "oito",
+            "password": "aslksdiu",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 9,
+            "name": "nove",
+            "password": "aslksdiu",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 10,
+            "name": "dez",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 11,
+            "name": "onze",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 12,
+            "name": "doze",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 13,
+            "name": "treze",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 14,
+            "name": "quatorze",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 15,
+            "name": "quinze",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 16,
+            "name": "dezeseis",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 17,
+            "name": "dezesete",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 18,
+            "name": "dezoito",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 19,
+            "name": "dezanove",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        },
+        {
+            "id": 20,
+            "name": "vinte",
+            "password": "jdmksfg",
+            "lastPassword": "nenhum"
+        }
+    ]
+}
